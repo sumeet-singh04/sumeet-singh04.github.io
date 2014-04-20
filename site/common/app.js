@@ -2,9 +2,9 @@
 
 var MAIN = {}
 
-var MAIN.CONTROLLERS  = angular.module("main_controllers",[]);
-var MAIN.DIRECTIVES = angular.module("main_directives",[]);
-var MAIN.SERVICES = angular.module("main_services",[]);
+MAIN.CONTROLLERS  = angular.module("main_controllers",[]);
+MAIN.DIRECTIVES = angular.module("main_directives",[]);
+MAIN.SERVICES = angular.module("main_services",[]);
 
 var dependencies = [
     "main_controllers",
@@ -14,9 +14,15 @@ var dependencies = [
 ]
 
 
-var MAIN_MODULE = angular.module('WebModule',['main_controllers','main_directives','main_services']);
+var MAIN_MODULE = angular.module('WebModule',dependencies.concat());
 
 MAIN_MODULE.config(function($stateProvider, $urlRouterProvider)
 {
+    $stateProvider.state('timeline',
+        {
+            url:'/timeline',
+            templateUrl:'timeline/PRTL_TimelineBase.html'
+        })
 
+    $urlRouterProvider.otherwise("/timeline");
 });

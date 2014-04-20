@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng="WebModule">
+<html ng-app="WebModule">
 <head lang="en">
     <meta name="X-UA-COMPATIBLE" content="IE=EDGE"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +11,32 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
     <script src="common/libs/js/angular-ui-router.js"></script>
     <script src="common/app.js"></script>
+
+    <!--Directives-->
+    <script src="home/header/DRCTV_Header.js"></script>
+
+
+    <!--Controllers-->
+    <script src="home/CTRL_Main.js"></script>
+    <script src="timeline/CTRL_Timeline.js"></script>
+
+    <!--Services-->
+    <script src="common/services/SRVC_get.js"></script>
     <title>Sumeet-WebDeveloper</title>
 </head>
-<body>
-    Hello
+<body ng-controller="site.home.CTRL_Main">
+<div view-header></div>
+<div class="fluid-row">
+    <div class="span2">
+
+    </div>
+    <div class="span6">
+        <div ui-view></div>
+    </div>
+    <div class="span4">
+        <div git-repos></div>
+    </div>
+</div>
+<div view-footer></div>
 </body>
 </html>

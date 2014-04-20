@@ -1,0 +1,25 @@
+<div ng-controller="site.timeline.CTRL_Timeline">
+    <div class="fluid-row">
+        <div class="span12">
+            <span ng-repeat="year in timelineYears">
+                    <button class="btn btn-primary">{{year}}</button>
+            </span>
+        </div>
+    </div>
+    <div ng-repeat="time in timelines">
+        <div class="fluid-row timelineRow">
+            <div class="span1">
+                    {{time.year}}
+            </div>
+            <div class="span6">
+                    {{time.description}}
+            </div>
+            <div class="span3">
+                    {{time.image}}
+            </div>
+            <div class="span2">
+                    {{time.place}}
+            </div>
+        </div>
+    </div>
+</div>
