@@ -1,0 +1,25 @@
+@import "web.scss";
+
+/*Css Starts here*/
+
+body {
+  background-color: $glBackgrooound;
+}
+
+.headerRow {
+  @include headerBackground;
+  box-shadow: $header-box-shadow;
+}
+
+.mainContainer {
+  @include margin;
+  @include border;
+  box-shadow: $container-box-shadow;
+  background-color: white;
+  min-height: 900px;
+}
+
+.navbarContainer {
+  @include navbarBackground;
+  box-shadow: $header-box-shadow;
+}

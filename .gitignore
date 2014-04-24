@@ -218,3 +218,4 @@ pip-log.txt
 #Added By Sumeet
 .idea/
 *.iml
+.sass-cache

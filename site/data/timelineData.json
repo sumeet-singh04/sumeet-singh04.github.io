@@ -1,5 +1,5 @@
 {
-    "timeLine":[
+    "timeline":[
         {
             "year":"2010",
             "description":"Test Descrption",
@@ -24,6 +24,4 @@
             "year":"2010",
             "description":"Test Descrption",
             "place":"Test Place"
-        }
-    ]
-}
+        }]}

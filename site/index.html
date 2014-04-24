@@ -6,7 +6,7 @@
     <meta charset="UTF-8"/>
     <link href="common/libs/css/bootstrap.css" rel="stylesheet">
     <link href="common/libs/css/bootstrap-theme.css" rel="stylesheet">
-
+    <link href="stylesheets/main.css" rel="stylesheet">
     <!--Loading Angular & app.js-->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
     <script src="common/libs/js/angular-ui-router.js"></script>
@@ -22,19 +22,23 @@
 
     <!--Services-->
     <script src="common/services/SRVC_get.js"></script>
-    <title>Sumeet-WebDeveloper</title>
+    <title>Sumeet-Web-Developer</title>
 </head>
 <body ng-controller="site.home.CTRL_Main">
 <div view-header></div>
-<div class="fluid-row">
-    <div class="span2">
+<div class="mainContainer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
 
-    </div>
-    <div class="span6">
-        <div ui-view></div>
-    </div>
-    <div class="span4">
-        <div git-repos></div>
+            </div>
+            <div class="col-md-6">
+                <div ui-view></div>
+            </div>
+            <div class="col-md-4">
+                <div git-repos></div>
+            </div>
+        </div>
     </div>
 </div>
 <div view-footer></div>
