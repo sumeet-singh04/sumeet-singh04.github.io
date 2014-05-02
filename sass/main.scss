@@ -11,15 +11,36 @@ body {
   box-shadow: $header-box-shadow;
 }
 
+.webResumeHeading {
+  text-align:  center;
+}
+
 .mainContainer {
-  @include margin;
+  margin-top: $glmargin;
+  margin-bottom: $glmargin;
+  padding-top: $glpadding;
   @include border;
   box-shadow: $container-box-shadow;
   background-color: white;
-  min-height: 900px;
+  height: auto;
 }
 
 .navbarContainer {
   @include navbarBackground;
   box-shadow: $header-box-shadow;
+}
+
+.timelineContainer {
+  margin-top: $glmargin;
+}
+
+
+.timelineRow {
+  height: 100px;
+  overflow: hidden;
+}
+
+.timelineImage {
+  height: 100px;
+  width: 50px;
 }

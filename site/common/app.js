@@ -10,7 +10,8 @@ var dependencies = [
     "main_controllers",
     "main_directives",
     "main_services",
-    "ui.router"
+    "ui.router",
+    "infinite-scroll"
 ]
 
 
@@ -23,6 +24,11 @@ MAIN_MODULE.config(function($stateProvider, $urlRouterProvider)
             url:'/timeline',
             templateUrl:'timeline/PRTL_TimelineBase.html'
         })
+        .state('timeline.filter',
+        {
+            url:"/:filter",
+            templateUrl:"timeline/PRTL_Timeline.html"
+        })
 
-    $urlRouterProvider.otherwise("/timeline");
+    $urlRouterProvider.otherwise("/timeline/all");
 });

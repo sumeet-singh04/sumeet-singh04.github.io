@@ -7,36 +7,50 @@
     <link href="common/libs/css/bootstrap.css" rel="stylesheet">
     <link href="common/libs/css/bootstrap-theme.css" rel="stylesheet">
     <link href="stylesheets/main.css" rel="stylesheet">
+
     <!--Loading Angular & app.js-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
     <script src="common/libs/js/angular-ui-router.js"></script>
+    <script src="common/libs/js/ng-infiniteScroll.min.js"></script>
     <script src="common/app.js"></script>
 
     <!--Directives-->
     <script src="home/header/DRCTV_Header.js"></script>
-
+  <!--  <script src="common/DRCTV_SmoothScroll.js"></script>-->
 
     <!--Controllers-->
     <script src="home/CTRL_Main.js"></script>
+    <script src="timeline/CTRL_TimelineBase.js"></script>
     <script src="timeline/CTRL_Timeline.js"></script>
+    <script src="home/header/CTRL_Header.js"></script>
 
     <!--Services-->
     <script src="common/services/SRVC_get.js"></script>
     <title>Sumeet-Web-Developer</title>
 </head>
-<body ng-controller="site.home.CTRL_Main">
+<body ng-controller="site.home.CTRL_Main" smooth-scroll>
 <div view-header></div>
-<div class="mainContainer">
-    <div class="container-fluid">
+<div >
+    <div class="container mainContainer">
         <div class="row">
-            <div class="col-md-2">
-
-            </div>
-            <div class="col-md-6">
+            <!--Include technology images here-->
+            <div class="col-md-7 ">
                 <div ui-view></div>
             </div>
-            <div class="col-md-4">
-                <div git-repos></div>
+            <div class="col-md-5">
+
+                <img src="theme/images/java.png">
+                <br>
+                <img src="theme/images/js_2.jpg">
+                <br>
+                <img src="theme/images/html_2.jpg">
+                <br>
+                <img src="theme/images/AngularJS.png">
+                <br>
+                <img src="theme/images/bootstrap_2.jpg">
+                <br>
+                <img src="theme/images/sass-less.jpg">
             </div>
         </div>
     </div>

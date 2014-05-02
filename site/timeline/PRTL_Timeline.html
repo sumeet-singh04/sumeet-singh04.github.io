@@ -1,0 +1,19 @@
+<div ng-controller="site.timeline.CTRL_Timeline" class="timelineContainer"
+     infinite-scroll='loadMore()' >
+    <div ng-repeat="timeline in timelines">
+        <div class="row timelineRow">
+            <div class="col-md-1">
+                {{timeline.year}}
+            </div>
+            <div class="col-md-6">
+                {{timeline.description}}
+            </div>
+            <div class="col-md-3" >
+                <img ng-src="timeline.image" class="timelineImage">
+            </div>
+            <div class="col-md-2">
+                {{timeline.place}}
+            </div>
+        </div>
+    </div>
+</div>
