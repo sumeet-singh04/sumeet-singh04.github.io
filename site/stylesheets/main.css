@@ -59,14 +59,318 @@ body {
   margin-top: 20px;
 }
 
-/* line 38, ../../sass/main.scss */
+/* line 37, ../../sass/main.scss */
 .timelineRow {
   height: 100px;
   overflow: hidden;
 }
 
-/* line 43, ../../sass/main.scss */
+/* line 42, ../../sass/main.scss */
+.timelineRow.ng-enter {
+  -webkit-animation: timelineAnim 2s;
+  /* Chrome, Safari, Opera */
+  animation: timelineAnim 2s;
+  -moz-animation: timelineAnim 2s;
+}
+
+/* line 50, ../../sass/main.scss */
 .timelineImage {
   height: 100px;
   width: 50px;
+}
+
+@-webkit-keyframes timelineAnim {
+  /* line 57, ../../sass/main.scss */
+  0% {
+    -ms-transform: scale(0, 0);
+    /* IE 9 */
+    -webkit-transform: scale(0, 0);
+    /* Chrome, Safari, Opera */
+    transform: scale(0, 0);
+    transform-origin: -1000% 0%;
+    -webkit-transform-origin: -1000% 0%;
+    -ms-transform-origin: -1000% 0%;
+  }
+
+  /* line 61, ../../sass/main.scss */
+  20% {
+    -ms-transform: scale(0.2, 0.2);
+    /* IE 9 */
+    -webkit-transform: scale(0.2, 0.2);
+    /* Chrome, Safari, Opera */
+    transform: scale(0.2, 0.2);
+    transform-origin: -70% 0%;
+    -webkit-transform-origin: -70% 0%;
+    -ms-transform-origin: -70% 0%;
+  }
+
+  /* line 65, ../../sass/main.scss */
+  40% {
+    -ms-transform: scale(0.3, 0.3);
+    /* IE 9 */
+    -webkit-transform: scale(0.3, 0.3);
+    /* Chrome, Safari, Opera */
+    transform: scale(0.3, 0.3);
+    transform-origin: -50% 0%;
+    -webkit-transform-origin: -50% 0%;
+    -ms-transform-origin: -50% 0%;
+  }
+
+  /* line 69, ../../sass/main.scss */
+  80% {
+    -ms-transform: scale(0.4, 0.4);
+    /* IE 9 */
+    -webkit-transform: scale(0.4, 0.4);
+    /* Chrome, Safari, Opera */
+    transform: scale(0.4, 0.4);
+    transform-origin: -20% 0%;
+    -webkit-transform-origin: -20% 0%;
+    -ms-transform-origin: -20% 0%;
+  }
+
+  /* line 73, ../../sass/main.scss */
+  90% {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+    transform-origin: 200% 0%;
+    -webkit-transform-origin: 200% 0%;
+    -ms-transform-origin: 200% 0%;
+  }
+
+  /* line 77, ../../sass/main.scss */
+  100% {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+    transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+  }
+}
+
+@-moz-keyframes timelineAnim {
+  /* line 57, ../../sass/main.scss */
+  0% {
+    -ms-transform: scale(0, 0);
+    /* IE 9 */
+    -webkit-transform: scale(0, 0);
+    /* Chrome, Safari, Opera */
+    transform: scale(0, 0);
+    transform-origin: -1000% 0%;
+    -webkit-transform-origin: -1000% 0%;
+    -ms-transform-origin: -1000% 0%;
+  }
+
+  /* line 61, ../../sass/main.scss */
+  20% {
+    -ms-transform: scale(0.2, 0.2);
+    /* IE 9 */
+    -webkit-transform: scale(0.2, 0.2);
+    /* Chrome, Safari, Opera */
+    transform: scale(0.2, 0.2);
+    transform-origin: -70% 0%;
+    -webkit-transform-origin: -70% 0%;
+    -ms-transform-origin: -70% 0%;
+  }
+
+  /* line 65, ../../sass/main.scss */
+  40% {
+    -ms-transform: scale(0.3, 0.3);
+    /* IE 9 */
+    -webkit-transform: scale(0.3, 0.3);
+    /* Chrome, Safari, Opera */
+    transform: scale(0.3, 0.3);
+    transform-origin: -50% 0%;
+    -webkit-transform-origin: -50% 0%;
+    -ms-transform-origin: -50% 0%;
+  }
+
+  /* line 69, ../../sass/main.scss */
+  80% {
+    -ms-transform: scale(0.4, 0.4);
+    /* IE 9 */
+    -webkit-transform: scale(0.4, 0.4);
+    /* Chrome, Safari, Opera */
+    transform: scale(0.4, 0.4);
+    transform-origin: -20% 0%;
+    -webkit-transform-origin: -20% 0%;
+    -ms-transform-origin: -20% 0%;
+  }
+
+  /* line 73, ../../sass/main.scss */
+  90% {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+    transform-origin: 200% 0%;
+    -webkit-transform-origin: 200% 0%;
+    -ms-transform-origin: 200% 0%;
+  }
+
+  /* line 77, ../../sass/main.scss */
+  100% {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+    transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+  }
+}
+
+@-o-keyframes timelineAnim {
+  /* line 57, ../../sass/main.scss */
+  0% {
+    -ms-transform: scale(0, 0);
+    /* IE 9 */
+    -webkit-transform: scale(0, 0);
+    /* Chrome, Safari, Opera */
+    transform: scale(0, 0);
+    transform-origin: -1000% 0%;
+    -webkit-transform-origin: -1000% 0%;
+    -ms-transform-origin: -1000% 0%;
+  }
+
+  /* line 61, ../../sass/main.scss */
+  20% {
+    -ms-transform: scale(0.2, 0.2);
+    /* IE 9 */
+    -webkit-transform: scale(0.2, 0.2);
+    /* Chrome, Safari, Opera */
+    transform: scale(0.2, 0.2);
+    transform-origin: -70% 0%;
+    -webkit-transform-origin: -70% 0%;
+    -ms-transform-origin: -70% 0%;
+  }
+
+  /* line 65, ../../sass/main.scss */
+  40% {
+    -ms-transform: scale(0.3, 0.3);
+    /* IE 9 */
+    -webkit-transform: scale(0.3, 0.3);
+    /* Chrome, Safari, Opera */
+    transform: scale(0.3, 0.3);
+    transform-origin: -50% 0%;
+    -webkit-transform-origin: -50% 0%;
+    -ms-transform-origin: -50% 0%;
+  }
+
+  /* line 69, ../../sass/main.scss */
+  80% {
+    -ms-transform: scale(0.4, 0.4);
+    /* IE 9 */
+    -webkit-transform: scale(0.4, 0.4);
+    /* Chrome, Safari, Opera */
+    transform: scale(0.4, 0.4);
+    transform-origin: -20% 0%;
+    -webkit-transform-origin: -20% 0%;
+    -ms-transform-origin: -20% 0%;
+  }
+
+  /* line 73, ../../sass/main.scss */
+  90% {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+    transform-origin: 200% 0%;
+    -webkit-transform-origin: 200% 0%;
+    -ms-transform-origin: 200% 0%;
+  }
+
+  /* line 77, ../../sass/main.scss */
+  100% {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+    transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+  }
+}
+
+@keyframes timelineAnim {
+  /* line 57, ../../sass/main.scss */
+  0% {
+    -ms-transform: scale(0, 0);
+    /* IE 9 */
+    -webkit-transform: scale(0, 0);
+    /* Chrome, Safari, Opera */
+    transform: scale(0, 0);
+    transform-origin: -1000% 0%;
+    -webkit-transform-origin: -1000% 0%;
+    -ms-transform-origin: -1000% 0%;
+  }
+
+  /* line 61, ../../sass/main.scss */
+  20% {
+    -ms-transform: scale(0.2, 0.2);
+    /* IE 9 */
+    -webkit-transform: scale(0.2, 0.2);
+    /* Chrome, Safari, Opera */
+    transform: scale(0.2, 0.2);
+    transform-origin: -70% 0%;
+    -webkit-transform-origin: -70% 0%;
+    -ms-transform-origin: -70% 0%;
+  }
+
+  /* line 65, ../../sass/main.scss */
+  40% {
+    -ms-transform: scale(0.3, 0.3);
+    /* IE 9 */
+    -webkit-transform: scale(0.3, 0.3);
+    /* Chrome, Safari, Opera */
+    transform: scale(0.3, 0.3);
+    transform-origin: -50% 0%;
+    -webkit-transform-origin: -50% 0%;
+    -ms-transform-origin: -50% 0%;
+  }
+
+  /* line 69, ../../sass/main.scss */
+  80% {
+    -ms-transform: scale(0.4, 0.4);
+    /* IE 9 */
+    -webkit-transform: scale(0.4, 0.4);
+    /* Chrome, Safari, Opera */
+    transform: scale(0.4, 0.4);
+    transform-origin: -20% 0%;
+    -webkit-transform-origin: -20% 0%;
+    -ms-transform-origin: -20% 0%;
+  }
+
+  /* line 73, ../../sass/main.scss */
+  90% {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+    transform-origin: 200% 0%;
+    -webkit-transform-origin: 200% 0%;
+    -ms-transform-origin: 200% 0%;
+  }
+
+  /* line 77, ../../sass/main.scss */
+  100% {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+    transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+  }
 }

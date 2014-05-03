@@ -11,7 +11,8 @@ var dependencies = [
     "main_directives",
     "main_services",
     "ui.router",
-    "infinite-scroll"
+    "infinite-scroll",
+    'ngAnimate'
 ]
 
 

@@ -2,13 +2,29 @@
  * Created by sumeet on 20-Apr-14.
  */
 
-MAIN.CONTROLLERS.controller('site.timeline.CTRL_TimelineBase',['$scope','getData','$stateParams','$state',
-    function(scope,getData,$stateParams,$state)
+MAIN.CONTROLLERS.controller('site.timeline.CTRL_TimelineBase',['$scope','getData','$stateParams','$state','$timeout',
+    function(scope,getData,$stateParams,$state,$timeout)
     {
         scope.timelines = [];
         scope.timelineYears = [];
+        scope.year = 'all';
         var yearsMap = {};
         var rawTimeLineData = [];
+
+
+      /*  function addTimeline(src,dest) {
+            var i=0;
+            var timeout = $timeout(function() {
+
+              dest.push(angular.copy(src[i]));
+                i++;
+                if(i>=src.length) {
+                    $timeout.cancel(timeout);
+                }
+            },1000);
+
+        }*/
+
 
         getData.getTimeLine().then(successRead,failRead);
 
@@ -32,12 +48,12 @@ MAIN.CONTROLLERS.controller('site.timeline.CTRL_TimelineBase',['$scope','getData
 
             });
 
-            if($stateParams.filter ) {
-                if( $stateParams.filter == "all") {
+            if(scope.year ) {
+                if( scope.year == "all") {
                     timelines = action.data.timeline.sort(sortTimeLine);
                 }
                 else {
-                    timelines = yearsMap[$stateParams.filter].sort(sortTimeLine);
+                    timelines = yearsMap[scope.year].sort(sortTimeLine);
                 }
 
             }
@@ -48,7 +64,11 @@ MAIN.CONTROLLERS.controller('site.timeline.CTRL_TimelineBase',['$scope','getData
             years.sort();
             scope.timelineYears = years;
 
-            angular.copy(timelines.splice(0,18),scope.timelines);
+            var tempTimelines = angular.copy(timelines.splice(0,18));
+
+            angular.forEach(tempTimelines,function(timeline,index) {
+               scope.timelines.push(timeline);
+            });
 
         }
 
@@ -63,12 +83,14 @@ MAIN.CONTROLLERS.controller('site.timeline.CTRL_TimelineBase',['$scope','getData
 
         scope.changeYear = function(year) {
             var timelines = [];
+            scope.timelines = [];
+            scope.year = year;
             if(year ) {
                 if( year == "all") {
                     timelines = angular.copy(rawTimeLineData.sort(sortTimeLine));
                 }
                 else {
-                    timelines = angular.copy(yearsMap[year].sort(sortTimeLine));
+                    timelines =  angular.copy(yearsMap[year].sort(sortTimeLine));
                 }
 
             }
@@ -78,19 +100,19 @@ MAIN.CONTROLLERS.controller('site.timeline.CTRL_TimelineBase',['$scope','getData
 
             angular.copy(timelines.splice(0,18),scope.timelines);
 
-            $state.go('timeline.filter',{filter:year});
+            //$state.go('timeline.filter',{filter:year});
         }
 
         scope.loadMore = function () {
             var timelines = [];
             console.log("loading more");
 
-            if($stateParams.filter ) {
-                if( $stateParams.filter == "all") {
+            if(scope.year ) {
+                if( scope.year == "all") {
                     angular.copy(rawTimeLineData.sort(sortTimeLine),timelines);
                 }
                 else {
-                    angular.copy(yearsMap[$stateParams.filter].sort(sortTimeLine),timelines);
+                    angular.copy(yearsMap[scope.year].sort(sortTimeLine),timelines);
                 }
 
             }

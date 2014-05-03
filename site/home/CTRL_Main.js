@@ -3,4 +3,5 @@
 MAIN.CONTROLLERS.controller('site.home.CTRL_Main',['$scope',function(scope)
 {
     console.log("completed");
+
 }])

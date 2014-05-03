@@ -46,6 +46,40 @@ $container-box-shadow: 0px 0px 4px $bordercolor;
   border-color: $bordercolor;
 }
 
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+
+@mixin scaleTransforms($a,$b) {
+  -ms-transform: scale($a,$b); /* IE 9 */
+  -webkit-transform: scale($a,$b); /* Chrome, Safari, Opera */
+  transform: scale($a,$b);
+}
+
+@mixin originTransform($a,$b) {
+  transform-origin:$a $b;
+  -webkit-transform-origin:$a $b;
+  -ms-transform-origin:$a $b;
+}
+
+@mixin addAnimation ($animation,$duration) {
+  -webkit-animation: $animation $duration; /* Chrome, Safari, Opera */
+  animation: $animation $duration;
+  -moz-animation: $animation $duration;
+}
+
 
 
 
