@@ -43,6 +43,10 @@ body {
   @include addAnimation(techImageAnim,4s);
 }
 
+.techImg:hover {
+  @include addAnimation(techImageAnim,infinite);
+}
+
 .timelineBaseContainer {
   padding-top: $glpadding;
 }
@@ -117,19 +121,7 @@ body {
   0% {
     @include scaleTransforms(0,0);
     @include originTransform(-1000% ,0%);
-  };
-  20% {
-    @include scaleTransforms(0.2,0.2);
-    @include originTransform(-70% ,0%);
-  };
-  40% {
-    @include scaleTransforms(0.3,0.3);
-    @include originTransform(-50%, 0%);
-  };
-  80% {
-    @include scaleTransforms(0.4,0.4);
-    @include originTransform(-20% ,0%);
-  };
+  }
   90% {
     @include scaleTransforms(1,1);
     @include originTransform(200% ,0%);
