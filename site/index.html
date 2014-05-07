@@ -19,7 +19,7 @@
 
     <!--Directives-->
     <script src="home/header/DRCTV_Header.js"></script>
-  <!--  <script src="common/DRCTV_SmoothScroll.js"></script>-->
+    <!--  <script src="common/DRCTV_SmoothScroll.js"></script>-->
 
     <!--Controllers-->
     <script src="home/CTRL_Main.js"></script>
@@ -33,27 +33,34 @@
 </head>
 <body ng-controller="site.home.CTRL_Main" smooth-scroll>
 <div view-header></div>
-<div >
-    <div class="container mainContainer">
-        <div class="row">
-            <!--Include technology images here-->
-            <div class="col-md-7 ">
-                <div ui-view></div>
-            </div>
-            <div class="col-md-5">
+<div class="container mainContainer">
+    <div class="row navbarContainer">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 navbarLink">
+            <span>About Me</span>|
+            <span>My Projects</span>|
+            <span>Techs I have worked</span>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <!--Include technology images here-->
+        <div class="col-md-7 ">
+            <div ui-view></div>
+        </div>
+        <div class="col-md-5">
 
-                <img src="theme/images/java.png">
-                <br>
-                <img src="theme/images/js_2.jpg">
-                <br>
-                <img src="theme/images/html_2.jpg">
-                <br>
-                <img src="theme/images/AngularJS.png">
-                <br>
-                <img src="theme/images/bootstrap_2.jpg">
-                <br>
-                <img src="theme/images/sass-less.jpg">
-            </div>
+            <img src="theme/images/java.png" class="techImg">
+            <br>
+            <img src="theme/images/js_2.jpg" class="techImg">
+            <br>
+            <img src="theme/images/html_2.jpg" class="techImg">
+            <br>
+            <img src="theme/images/AngularJS.png" class="techImg">
+            <br>
+            <img src="theme/images/bootstrap_2.jpg" class="techImg">
+            <br>
+            <img src="theme/images/sass-less.jpg" class="techImg">
         </div>
     </div>
 </div>

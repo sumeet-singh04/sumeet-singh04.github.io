@@ -7,7 +7,7 @@ MAIN.CONTROLLERS.controller('site.timeline.CTRL_TimelineBase',['$scope','getData
     {
         scope.timelines = [];
         scope.timelineYears = [];
-        scope.year = 'all';
+        scope.year = 'All';
         var yearsMap = {};
         var rawTimeLineData = [];
 
@@ -33,6 +33,7 @@ MAIN.CONTROLLERS.controller('site.timeline.CTRL_TimelineBase',['$scope','getData
             var years = [];
             var timelines = [];
 
+
             angular.copy(action.data.timeline,rawTimeLineData);
 
             angular.forEach(action.data.timeline,function(val,index)
@@ -49,7 +50,7 @@ MAIN.CONTROLLERS.controller('site.timeline.CTRL_TimelineBase',['$scope','getData
             });
 
             if(scope.year ) {
-                if( scope.year == "all") {
+                if( scope.year == "All") {
                     timelines = action.data.timeline.sort(sortTimeLine);
                 }
                 else {
@@ -62,6 +63,7 @@ MAIN.CONTROLLERS.controller('site.timeline.CTRL_TimelineBase',['$scope','getData
             }
 
             years.sort();
+            years.unshift('All');
             scope.timelineYears = years;
 
             var tempTimelines = angular.copy(timelines.splice(0,18));
@@ -86,7 +88,7 @@ MAIN.CONTROLLERS.controller('site.timeline.CTRL_TimelineBase',['$scope','getData
             scope.timelines = [];
             scope.year = year;
             if(year ) {
-                if( year == "all") {
+                if( year == "All") {
                     timelines = angular.copy(rawTimeLineData.sort(sortTimeLine));
                 }
                 else {
@@ -108,7 +110,7 @@ MAIN.CONTROLLERS.controller('site.timeline.CTRL_TimelineBase',['$scope','getData
             console.log("loading more");
 
             if(scope.year ) {
-                if( scope.year == "all") {
+                if( scope.year == "All") {
                     angular.copy(rawTimeLineData.sort(sortTimeLine),timelines);
                 }
                 else {

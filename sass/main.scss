@@ -3,7 +3,7 @@
 /*Css Starts here*/
 
 body {
-  background-color: $glBackgrooound;
+  background-color: $glBackground;
 }
 
 .headerRow {
@@ -18,16 +18,47 @@ body {
 .mainContainer {
   margin-top: $glmargin;
   margin-bottom: $glmargin;
-  padding-top: $glpadding;
+  padding-bottom: $glpadding;
   @include border;
   box-shadow: $container-box-shadow;
-  background-color: white;
+  background-color: $contentBgColor;
   height: auto;
 }
 
 .navbarContainer {
   @include navbarBackground;
   box-shadow: $header-box-shadow;
+  z-index: 1000;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+.navbarLink {
+  font-size: 18px;
+}
+
+.techImg {
+  @include addAnimation(techImageAnim,4s);
+}
+
+.timelineBaseContainer {
+  padding-top: $glpadding;
+}
+
+.yearFilter {
+  height: auto;
+
+}
+
+.yearFilter.ng-enter {
+  @include scaleTransforms(0,0);
+
+}
+
+.yearFilter.ng-enter.ng-enter-active {
+  @include addAnimation(timelineYearsAnim,4s);
 }
 
 .timelineContainer {
@@ -37,6 +68,12 @@ body {
 .timelineRow {
   height: 100px;
   overflow: hidden;
+  background: whitesmoke;
+  box-shadow: $timeline-row-shadow;
+  -moz-box-shadow: $timeline-row-shadow;
+  -webkit-box-shadow: $timeline-row-shadow;
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 
 .timelineRow.ng-enter {
@@ -50,6 +87,29 @@ body {
 .timelineImage {
   height: 100px;
   width: 50px;
+}
+
+
+@include keyframes(timelineYearsAnim) {
+  from {
+    @include scaleTransforms(0,0);
+    @include originTransform(-1000% ,0%);
+  }
+  to {
+    @include scaleTransforms(2,2);
+    @include originTransform(0% ,0%);
+  }
+}
+
+@include keyframes(techImageAnim) {
+  from {
+    @include scaleTransforms(0,0);
+    @include rotateYTransform(0deg);
+  };
+  to{
+    @include scaleTransforms(1,1);
+    @include rotateYTransform(360deg);
+  }
 }
 
 

@@ -3,7 +3,7 @@
 /*Css Starts here*/
 /* line 5, ../../sass/main.scss */
 body {
-  background-color: #9e9e9e;
+  background-color: #cfe7fa;
 }
 
 /* line 9, ../../sass/main.scss */
@@ -18,7 +18,7 @@ body {
   background-image: -moz-linear-gradient(top, #cfe7fa 0%, #6393c1 100%);
   background-image: -o-linear-gradient(top, #cfe7fa 0%, #6393c1 100%);
   background-image: linear-gradient(top, #cfe7fa 0%, #6393c1 100%);
-  box-shadow: 0px 2px 4px #d2d2d2;
+  box-shadow: 0px 2px 4px 2px #6393c1;
 }
 
 /* line 14, ../../sass/main.scss */
@@ -30,11 +30,11 @@ body {
 .mainContainer {
   margin-top: 20px;
   margin-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 20px;
   border-style: solid;
   border-width: 1px;
   border-color: #d2d2d2;
-  box-shadow: 0px 0px 4px #d2d2d2;
+  box-shadow: 0px 0px 4px 2px #6393c1;
   background-color: white;
   height: auto;
 }
@@ -51,21 +51,71 @@ body {
   background-image: -moz-linear-gradient(top, #6393c1 0%, #cfe7fa 100%);
   background-image: -o-linear-gradient(top, #6393c1 0%, #cfe7fa 100%);
   background-image: linear-gradient(top, #6393c1 0%, #cfe7fa 100%);
-  box-shadow: 0px 2px 4px #d2d2d2;
+  box-shadow: 0px 2px 4px 2px #6393c1;
+  z-index: 1000;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
 }
 
-/* line 33, ../../sass/main.scss */
+/* line 38, ../../sass/main.scss */
+.navbarLink {
+  font-size: 18px;
+}
+
+/* line 42, ../../sass/main.scss */
+.techImg {
+  -webkit-animation: techImageAnim 4s;
+  /* Chrome, Safari, Opera */
+  animation: techImageAnim 4s;
+  -moz-animation: techImageAnim 4s;
+}
+
+/* line 46, ../../sass/main.scss */
+.timelineBaseContainer {
+  padding-top: 20px;
+}
+
+/* line 50, ../../sass/main.scss */
+.yearFilter {
+  height: auto;
+}
+
+/* line 55, ../../sass/main.scss */
+.yearFilter.ng-enter {
+  -ms-transform: scale(0, 0);
+  /* IE 9 */
+  -webkit-transform: scale(0, 0);
+  /* Chrome, Safari, Opera */
+  transform: scale(0, 0);
+}
+
+/* line 60, ../../sass/main.scss */
+.yearFilter.ng-enter.ng-enter-active {
+  -webkit-animation: timelineYearsAnim 4s;
+  /* Chrome, Safari, Opera */
+  animation: timelineYearsAnim 4s;
+  -moz-animation: timelineYearsAnim 4s;
+}
+
+/* line 64, ../../sass/main.scss */
 .timelineContainer {
   margin-top: 20px;
 }
 
-/* line 37, ../../sass/main.scss */
+/* line 68, ../../sass/main.scss */
 .timelineRow {
   height: 100px;
   overflow: hidden;
+  background: whitesmoke;
+  box-shadow: 0px 0px 3px #d2d2d2;
+  -moz-box-shadow: 0px 0px 3px #d2d2d2;
+  -webkit-box-shadow: 0px 0px 3px #d2d2d2;
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 
-/* line 42, ../../sass/main.scss */
+/* line 79, ../../sass/main.scss */
 .timelineRow.ng-enter {
   -webkit-animation: timelineAnim 2s;
   /* Chrome, Safari, Opera */
@@ -73,14 +123,222 @@ body {
   -moz-animation: timelineAnim 2s;
 }
 
-/* line 50, ../../sass/main.scss */
+/* line 87, ../../sass/main.scss */
 .timelineImage {
   height: 100px;
   width: 50px;
 }
 
+@-webkit-keyframes timelineYearsAnim {
+  /* line 94, ../../sass/main.scss */
+  from {
+    -ms-transform: scale(0, 0);
+    /* IE 9 */
+    -webkit-transform: scale(0, 0);
+    /* Chrome, Safari, Opera */
+    transform: scale(0, 0);
+    transform-origin: -1000% 0%;
+    -webkit-transform-origin: -1000% 0%;
+    -ms-transform-origin: -1000% 0%;
+  }
+
+  /* line 98, ../../sass/main.scss */
+  to {
+    -ms-transform: scale(2, 2);
+    /* IE 9 */
+    -webkit-transform: scale(2, 2);
+    /* Chrome, Safari, Opera */
+    transform: scale(2, 2);
+    transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+  }
+}
+
+@-moz-keyframes timelineYearsAnim {
+  /* line 94, ../../sass/main.scss */
+  from {
+    -ms-transform: scale(0, 0);
+    /* IE 9 */
+    -webkit-transform: scale(0, 0);
+    /* Chrome, Safari, Opera */
+    transform: scale(0, 0);
+    transform-origin: -1000% 0%;
+    -webkit-transform-origin: -1000% 0%;
+    -ms-transform-origin: -1000% 0%;
+  }
+
+  /* line 98, ../../sass/main.scss */
+  to {
+    -ms-transform: scale(2, 2);
+    /* IE 9 */
+    -webkit-transform: scale(2, 2);
+    /* Chrome, Safari, Opera */
+    transform: scale(2, 2);
+    transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+  }
+}
+
+@-o-keyframes timelineYearsAnim {
+  /* line 94, ../../sass/main.scss */
+  from {
+    -ms-transform: scale(0, 0);
+    /* IE 9 */
+    -webkit-transform: scale(0, 0);
+    /* Chrome, Safari, Opera */
+    transform: scale(0, 0);
+    transform-origin: -1000% 0%;
+    -webkit-transform-origin: -1000% 0%;
+    -ms-transform-origin: -1000% 0%;
+  }
+
+  /* line 98, ../../sass/main.scss */
+  to {
+    -ms-transform: scale(2, 2);
+    /* IE 9 */
+    -webkit-transform: scale(2, 2);
+    /* Chrome, Safari, Opera */
+    transform: scale(2, 2);
+    transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+  }
+}
+
+@keyframes timelineYearsAnim {
+  /* line 94, ../../sass/main.scss */
+  from {
+    -ms-transform: scale(0, 0);
+    /* IE 9 */
+    -webkit-transform: scale(0, 0);
+    /* Chrome, Safari, Opera */
+    transform: scale(0, 0);
+    transform-origin: -1000% 0%;
+    -webkit-transform-origin: -1000% 0%;
+    -ms-transform-origin: -1000% 0%;
+  }
+
+  /* line 98, ../../sass/main.scss */
+  to {
+    -ms-transform: scale(2, 2);
+    /* IE 9 */
+    -webkit-transform: scale(2, 2);
+    /* Chrome, Safari, Opera */
+    transform: scale(2, 2);
+    transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+  }
+}
+
+@-webkit-keyframes techImageAnim {
+  /* line 105, ../../sass/main.scss */
+  from {
+    -ms-transform: scale(0, 0);
+    /* IE 9 */
+    -webkit-transform: scale(0, 0);
+    /* Chrome, Safari, Opera */
+    transform: scale(0, 0);
+    -moz-transfor: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 109, ../../sass/main.scss */
+  to {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+    -moz-transfor: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@-moz-keyframes techImageAnim {
+  /* line 105, ../../sass/main.scss */
+  from {
+    -ms-transform: scale(0, 0);
+    /* IE 9 */
+    -webkit-transform: scale(0, 0);
+    /* Chrome, Safari, Opera */
+    transform: scale(0, 0);
+    -moz-transfor: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 109, ../../sass/main.scss */
+  to {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+    -moz-transfor: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@-o-keyframes techImageAnim {
+  /* line 105, ../../sass/main.scss */
+  from {
+    -ms-transform: scale(0, 0);
+    /* IE 9 */
+    -webkit-transform: scale(0, 0);
+    /* Chrome, Safari, Opera */
+    transform: scale(0, 0);
+    -moz-transfor: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 109, ../../sass/main.scss */
+  to {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+    -moz-transfor: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes techImageAnim {
+  /* line 105, ../../sass/main.scss */
+  from {
+    -ms-transform: scale(0, 0);
+    /* IE 9 */
+    -webkit-transform: scale(0, 0);
+    /* Chrome, Safari, Opera */
+    transform: scale(0, 0);
+    -moz-transfor: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 109, ../../sass/main.scss */
+  to {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+    -moz-transfor: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
 @-webkit-keyframes timelineAnim {
-  /* line 57, ../../sass/main.scss */
+  /* line 117, ../../sass/main.scss */
   0% {
     -ms-transform: scale(0, 0);
     /* IE 9 */
@@ -92,7 +350,7 @@ body {
     -ms-transform-origin: -1000% 0%;
   }
 
-  /* line 61, ../../sass/main.scss */
+  /* line 121, ../../sass/main.scss */
   20% {
     -ms-transform: scale(0.2, 0.2);
     /* IE 9 */
@@ -104,7 +362,7 @@ body {
     -ms-transform-origin: -70% 0%;
   }
 
-  /* line 65, ../../sass/main.scss */
+  /* line 125, ../../sass/main.scss */
   40% {
     -ms-transform: scale(0.3, 0.3);
     /* IE 9 */
@@ -116,7 +374,7 @@ body {
     -ms-transform-origin: -50% 0%;
   }
 
-  /* line 69, ../../sass/main.scss */
+  /* line 129, ../../sass/main.scss */
   80% {
     -ms-transform: scale(0.4, 0.4);
     /* IE 9 */
@@ -128,7 +386,7 @@ body {
     -ms-transform-origin: -20% 0%;
   }
 
-  /* line 73, ../../sass/main.scss */
+  /* line 133, ../../sass/main.scss */
   90% {
     -ms-transform: scale(1, 1);
     /* IE 9 */
@@ -140,7 +398,7 @@ body {
     -ms-transform-origin: 200% 0%;
   }
 
-  /* line 77, ../../sass/main.scss */
+  /* line 137, ../../sass/main.scss */
   100% {
     -ms-transform: scale(1, 1);
     /* IE 9 */
@@ -154,7 +412,7 @@ body {
 }
 
 @-moz-keyframes timelineAnim {
-  /* line 57, ../../sass/main.scss */
+  /* line 117, ../../sass/main.scss */
   0% {
     -ms-transform: scale(0, 0);
     /* IE 9 */
@@ -166,7 +424,7 @@ body {
     -ms-transform-origin: -1000% 0%;
   }
 
-  /* line 61, ../../sass/main.scss */
+  /* line 121, ../../sass/main.scss */
   20% {
     -ms-transform: scale(0.2, 0.2);
     /* IE 9 */
@@ -178,7 +436,7 @@ body {
     -ms-transform-origin: -70% 0%;
   }
 
-  /* line 65, ../../sass/main.scss */
+  /* line 125, ../../sass/main.scss */
   40% {
     -ms-transform: scale(0.3, 0.3);
     /* IE 9 */
@@ -190,7 +448,7 @@ body {
     -ms-transform-origin: -50% 0%;
   }
 
-  /* line 69, ../../sass/main.scss */
+  /* line 129, ../../sass/main.scss */
   80% {
     -ms-transform: scale(0.4, 0.4);
     /* IE 9 */
@@ -202,7 +460,7 @@ body {
     -ms-transform-origin: -20% 0%;
   }
 
-  /* line 73, ../../sass/main.scss */
+  /* line 133, ../../sass/main.scss */
   90% {
     -ms-transform: scale(1, 1);
     /* IE 9 */
@@ -214,7 +472,7 @@ body {
     -ms-transform-origin: 200% 0%;
   }
 
-  /* line 77, ../../sass/main.scss */
+  /* line 137, ../../sass/main.scss */
   100% {
     -ms-transform: scale(1, 1);
     /* IE 9 */
@@ -228,7 +486,7 @@ body {
 }
 
 @-o-keyframes timelineAnim {
-  /* line 57, ../../sass/main.scss */
+  /* line 117, ../../sass/main.scss */
   0% {
     -ms-transform: scale(0, 0);
     /* IE 9 */
@@ -240,7 +498,7 @@ body {
     -ms-transform-origin: -1000% 0%;
   }
 
-  /* line 61, ../../sass/main.scss */
+  /* line 121, ../../sass/main.scss */
   20% {
     -ms-transform: scale(0.2, 0.2);
     /* IE 9 */
@@ -252,7 +510,7 @@ body {
     -ms-transform-origin: -70% 0%;
   }
 
-  /* line 65, ../../sass/main.scss */
+  /* line 125, ../../sass/main.scss */
   40% {
     -ms-transform: scale(0.3, 0.3);
     /* IE 9 */
@@ -264,7 +522,7 @@ body {
     -ms-transform-origin: -50% 0%;
   }
 
-  /* line 69, ../../sass/main.scss */
+  /* line 129, ../../sass/main.scss */
   80% {
     -ms-transform: scale(0.4, 0.4);
     /* IE 9 */
@@ -276,7 +534,7 @@ body {
     -ms-transform-origin: -20% 0%;
   }
 
-  /* line 73, ../../sass/main.scss */
+  /* line 133, ../../sass/main.scss */
   90% {
     -ms-transform: scale(1, 1);
     /* IE 9 */
@@ -288,7 +546,7 @@ body {
     -ms-transform-origin: 200% 0%;
   }
 
-  /* line 77, ../../sass/main.scss */
+  /* line 137, ../../sass/main.scss */
   100% {
     -ms-transform: scale(1, 1);
     /* IE 9 */
@@ -302,7 +560,7 @@ body {
 }
 
 @keyframes timelineAnim {
-  /* line 57, ../../sass/main.scss */
+  /* line 117, ../../sass/main.scss */
   0% {
     -ms-transform: scale(0, 0);
     /* IE 9 */
@@ -314,7 +572,7 @@ body {
     -ms-transform-origin: -1000% 0%;
   }
 
-  /* line 61, ../../sass/main.scss */
+  /* line 121, ../../sass/main.scss */
   20% {
     -ms-transform: scale(0.2, 0.2);
     /* IE 9 */
@@ -326,7 +584,7 @@ body {
     -ms-transform-origin: -70% 0%;
   }
 
-  /* line 65, ../../sass/main.scss */
+  /* line 125, ../../sass/main.scss */
   40% {
     -ms-transform: scale(0.3, 0.3);
     /* IE 9 */
@@ -338,7 +596,7 @@ body {
     -ms-transform-origin: -50% 0%;
   }
 
-  /* line 69, ../../sass/main.scss */
+  /* line 129, ../../sass/main.scss */
   80% {
     -ms-transform: scale(0.4, 0.4);
     /* IE 9 */
@@ -350,7 +608,7 @@ body {
     -ms-transform-origin: -20% 0%;
   }
 
-  /* line 73, ../../sass/main.scss */
+  /* line 133, ../../sass/main.scss */
   90% {
     -ms-transform: scale(1, 1);
     /* IE 9 */
@@ -362,7 +620,7 @@ body {
     -ms-transform-origin: 200% 0%;
   }
 
-  /* line 77, ../../sass/main.scss */
+  /* line 137, ../../sass/main.scss */
   100% {
     -ms-transform: scale(1, 1);
     /* IE 9 */

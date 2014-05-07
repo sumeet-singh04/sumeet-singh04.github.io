@@ -1,9 +1,8 @@
-<div ng-controller="site.timeline.CTRL_TimelineBase">
-    <div class="row yearFilter">
-        <div class="col-md-12">
-            <button class="btn btn-primary" ng-click="changeYear('all')">All</button>
-            <span ng-repeat="year in timelineYears">
-                    <button class="btn btn-primary" ng-click="changeYear(year)">{{year}}</button>
+<div ng-controller="site.timeline.CTRL_TimelineBase" class="timelineBaseContainer">
+    <div class="row">
+        <div class="col-md-12 ">
+            <span class="yearFilter" ng-repeat="year in timelineYears">
+                <button class="btn btn-primary" ng-click="changeYear(year)">{{year}}</button>
             </span>
         </div>
     </div>

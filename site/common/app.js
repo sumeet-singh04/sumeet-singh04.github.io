@@ -25,11 +25,11 @@ MAIN_MODULE.config(function($stateProvider, $urlRouterProvider)
             url:'/timeline',
             templateUrl:'timeline/PRTL_TimelineBase.html'
         })
-        .state('timeline.filter',
+        .state('timeline.show',
         {
-            url:"/:filter",
+            url:"/show",
             templateUrl:"timeline/PRTL_Timeline.html"
         })
 
-    $urlRouterProvider.otherwise("/timeline/all");
+    $urlRouterProvider.otherwise("/timeline/show");
 });
