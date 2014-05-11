@@ -12,6 +12,7 @@ $glmargin : 20px;
 $header-box-shadow: 0px 2px 4px 2px $headerBorderColor;
 $container-box-shadow: 0px 0px 4px 2px $headerBorderColor;
 $timeline-row-shadow: 0px 0px 3px $bordercolor;
+$headerQouteShadow: 0px 0px 15px 0px #6393c1;
 
 /*Mixins Start Here */
 @mixin headerBackground {
@@ -20,6 +21,15 @@ $timeline-row-shadow: 0px 0px 3px $bordercolor;
   // IE9 SVG, needs conditional override of 'filter' to 'none'
   $experimental-support-for-svg: true;
   @include background-image(linear-gradient(top, rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%));
+}
+
+
+@mixin navbarQoute {
+  // needs latest Compass, add '@import "compass"' to your scss
+  @include filter-gradient(#6393c1, #6393c1, vertical); // IE6-8
+  // IE9 SVG, needs conditional override of 'filter' to 'none'
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  rgba(99,147,193,0.65) 0%,rgba(99,147,193,1) 33%,rgba(99,147,193,1) 65%,rgba(99,147,193,0.65) 100%));
 }
 
 @mixin navbarBackground {
@@ -73,10 +83,10 @@ $timeline-row-shadow: 0px 0px 3px $bordercolor;
   -ms-transform-origin:$a $b;
 }
 
-@mixin addAnimation ($animation,$duration) {
-  -webkit-animation: $animation $duration; /* Chrome, Safari, Opera */
-  animation: $animation $duration;
-  -moz-animation: $animation $duration;
+@mixin addAnimation ($animation,$duration,$timingfnctn,$delay) {
+  -webkit-animation: $animation $duration $timingfnctn $delay; /* Chrome, Safari, Opera */
+  animation: $animation $duration $timingfnctn $delay;
+  -moz-animation: $animation $duration $timingfnctn $delay;
 }
 
 @mixin rotateYTransform($a) {

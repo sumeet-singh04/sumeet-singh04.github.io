@@ -1,5 +1,16 @@
 <div ng-controller="site.timeline.CTRL_TimelineBase" class="timelineBaseContainer">
     <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 viewHeading">
+            <span>{{viewHeader | viewFilter}}</span>
+            <div class="row">
+                You must be wondering, What is trace line ?
+                Well trace line is just like your facebook timeline, but instead of showing all your social activity here,
+                I am showing only my career line, as to what I was doing and When I was doing it.
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
         <div class="col-md-12 ">
             <span class="yearFilter" ng-repeat="year in timelineYears">
                 <button class="btn btn-primary" ng-click="changeYear(year)">{{year}}</button>

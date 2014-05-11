@@ -30,6 +30,12 @@ MAIN_MODULE.config(function($stateProvider, $urlRouterProvider)
             url:"/show",
             templateUrl:"timeline/PRTL_Timeline.html"
         })
+        .state('aboutMe',
+        {
+            url: "/aboutMe",
+            templateUrl: "aboutMe/PRTL_aboutMeBase.html"
+        })
+
 
     $urlRouterProvider.otherwise("/timeline/show");
 });

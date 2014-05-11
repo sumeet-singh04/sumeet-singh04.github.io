@@ -7,13 +7,43 @@ body {
 }
 
 .headerRow {
-  @include headerBackground;
+  //@include headerBackground;
+  background: white;
   box-shadow: $header-box-shadow;
+  padding-top:10px;
+  padding-bottom:10px;
 }
 
 .webResumeHeading {
-  text-align:  center;
+  padding-top: 40px;
+  font-size: 20px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  height: 124px;
+  background-image: url('../theme/images/634293.JPG');
+  background-repeat: no-repeat;
+  background-position: right top;
+
 }
+
+.webResumeHeadingXs {
+  text-align:  center;
+  font-size: 20px;
+}
+
+.headerQouteContainer {
+  padding-left: 20px;
+  padding-right: 20px
+}
+
+
+.headerQoute {
+  @include navbarQoute;
+  font-family: 'Kaushan Script', cursive;
+  box-shadow: $headerQouteShadow;
+  -webkit-box-shadow: $headerQouteShadow;
+  -moz-box-shadow: $headerQouteShadow;
+}
+
 
 .mainContainer {
   margin-top: $glmargin;
@@ -32,19 +62,35 @@ body {
   height: 30px;
   text-align: center;
   vertical-align: middle;
-
+  margin-bottom: $glmargin;
 }
 
 .navbarLink {
   font-size: 18px;
+  text-align: center;
+
+  .divider {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+  }
+
+  span:hover {
+
+    cursor: pointer;
+  }
 }
 
 .techImg {
-  @include addAnimation(techImageAnim,4s);
+  @include addAnimation(techImageAnim,4s,linear,2s);
+  max-height: 100px;
 }
 
-.techImg:hover {
-  @include addAnimation(techImageAnim,infinite);
+.viewHeading {
+  text-align: center;
+  font-family: "Kaushan Script", cursive;
+  font-size: 30px;
+  padding-bottom: 10px;
 }
 
 .timelineBaseContainer {
@@ -62,7 +108,7 @@ body {
 }
 
 .yearFilter.ng-enter.ng-enter-active {
-  @include addAnimation(timelineYearsAnim,4s);
+  @include addAnimation(timelineYearsAnim,4s,linear,0s);
 }
 
 .timelineContainer {
@@ -81,7 +127,7 @@ body {
 }
 
 .timelineRow.ng-enter {
-  @include addAnimation(timelineAnim,2s);
+  @include addAnimation(timelineAnim,2s,linear,0s);
 }
 
 .timelineRow.ng-enter.ng-enter-active {
