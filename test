@@ -1,0 +1,44 @@
+directive 
+
+'use strict';
+
+function filesModelDirective(){
+  return {
+    controller: function($parse, $element, $attrs, $scope){
+      var exp = $parse($attrs.filesModel);
+
+      $element.on('change', function(){
+        exp.assign($scope, this);
+        $scope.$apply();
+      });
+    }
+  };
+}
+
+
+html
+
+<form class="form" name="form" novalidate ng:submit="submit()">
+	
+        <input type="file" files-model="image" required >
+
+
+   
+        <button  type="submit" >Save</button>
+ 
+</form>
+
+javascript
+
+ $scope.submit = function() {
+ var config = {
+	headers : {
+		content-type:undefined
+	}
+ }
+ $http.post('/image/save',$scope.image,config).then(function(data){
+ console.log("success");
+ },function(data){
+ console.log("error");
+ });
+ }
