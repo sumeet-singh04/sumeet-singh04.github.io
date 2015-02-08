@@ -1,0 +1,25 @@
+{
+  "name": "full_stack_mockup",
+  "version": "0.1.0",
+  "description": "mock",
+  "main": "index.html",
+  "authors": [
+    "sumeet"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "1.2.28",
+    "angular-ui-router": "~0.2.13",
+    "angular-bootstrap": "~0.12.0",
+    "lodash": "~3.1.0",
+    "jquery": "1.11.2"
+  }
+}

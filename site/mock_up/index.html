@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mock up screens">
+    <meta name="author" content="Sumeet Singh">
+
+    <link href="lib/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/css/app.css" rel="stylesheet">
+
+    <!--Polyfills-->
+    <!--[if IE < 9]>
+        <script>
+            document.createElement("<accordion>");
+            document.createElement("<accordion-group>");
+            document.createElement("<accordion-heading>");
+            document.createElement("<strong>");
+        </script>
+    <![endif]>
+
+
+        <!--Libraries-->
+
+    <script src="lib/js/es5sham.min.js"></script>
+    <script src="lib/js/es5shim.min.js"></script>
+    <script src="lib/js/respond.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="lib/js/highcharts.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+
+
+    <!--Application-->
+    <script src="js/app.js"></script>
+    <script src="js/controllers/dashboard-controller.js"></script>
+    <script src="js/services/fetch-data-service.js"></script>
+    <title>Mock Design</title>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#page-top">Welcome!</a>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div ui-view>
+
+</div>
+
+<script type="text/ng-template" id="info-modal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="$close()">OK</button>
+        <button class="btn btn-warning" ng-click="$dismiss()">Cancel</button>
+    </div>
+</script>
+</body>
+</html>

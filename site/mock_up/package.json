@@ -1,0 +1,23 @@
+{
+  "name": "full_stack_mockup",
+  "version": "0.0.1",
+  "description": "mock ups",
+  "main": "gruntfile.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli":"^0.1.13",
+    "bower":"^1.3.12",
+    "grunt-http-server":"^1.2.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli":"^0.1.13",
+    "bower":"^1.3.12",
+    "grunt-http-server":"^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sumeet singh",
+  "license": "MIT"
+}

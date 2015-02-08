@@ -1,0 +1,40 @@
+{
+  "item" : {
+    "metric" : {
+      "testScore" : 52,
+      "maintainabilityScore":85,
+      "security": 65,
+      "workmanship":45,
+      "testStatus" : "S",
+      "maintainabilityStatus" : "S",
+      "status": "S"
+    },
+    "build" : {
+      "status" : "S",
+      "buildTime": "10:52 AM - 1/1/2015"
+    },
+    "unitTest" : {
+      "status" : "S",
+      "successUnits" : 142,
+      "failUnit": 41,
+      "percent" :"75%",
+      "percentStatus": "S",
+      "codeCoverageStatus": "S",
+      "codeCoverage" : "85%"
+     },
+    "functionalTest" : {
+      "status" : "S",
+      "successUnits" : 142,
+      "failUnit": 41,
+      "percent" :"63%",
+      "percentStatus": "W",
+      "codeCoverageStatus": "F",
+      "codeCoverage" : "20%"
+    },
+    "result" : {
+      "resultMsg" : "",
+      "status": "S",
+      "message" : "Complete"
+    }
+  }
+}

@@ -1,0 +1,142 @@
+.container.body {
+    border: 1px #d2d2d2 solid;
+    background-color: #d2d2d2;
+    min-width: 1200px;
+}
+
+.dashboard-heading-row {
+    display: block;
+    list-style: none;
+}
+
+.item-heading.alert-success.panel-default > .panel-heading {
+    background-color: limegreen;
+}
+
+.item-heading > .panel-collapse > .panel-body {
+    padding: 5px;
+}
+
+.item-heading .square {
+    height: 40px;
+}
+
+.bg-default {
+    background-color: #d2d2d2;
+}
+.bg-success {
+    background-color: limegreen;
+}
+.bg-danger {
+    background-color: darkred;
+}
+.bg-primary {
+    background-color: #04519b;
+}
+
+.data-body > ul{
+    list-style: none;
+    padding-left: 0px;
+    display: block;
+}
+
+.data-body > ul > li{
+    display: inline-block;
+    width: 20%;
+    height: 300px;
+    vertical-align: top;
+}
+
+.data-body > ul > li div.panel-body {
+    padding: 0px;
+}
+
+.data-body > ul > li div.panel-body.build-body {
+    height: 250px;
+}
+
+.data-body > ul > li div.panel-body.build-body > div.row-1{
+    padding-top: 50px;
+    height: 200px;
+}
+
+.data-body > ul > li div.panel-body.build-body > div.row-2 {
+    height: 100px;
+}
+
+.data-body > ul > li div.panel-body.build-body > div.row-1 div {
+    width: 49%;
+    display: inline-block;
+}
+
+.data-body > ul > li div.panel-body .metric-row-1 {
+    height: 125px;
+}
+
+.data-body > ul > li div.panel-body .metric-row-2 {
+    height: 125px;
+}
+
+
+.data-body > ul > li div.panel-body .metric-row-1 >  div{
+    width: 49%;
+    display: inline-block;
+}
+
+.data-body > ul > li div.panel-body .metric-row-1 >  div p {
+    font-size:  14px;;
+}
+
+.data-body > ul > li div.panel-body .metric-row-2 >  div{
+    width: 49%;
+    display: inline-block;
+}
+
+.data-body > ul > li div.panel-body .metric-row-2 >  div p {
+    font-size:  14px;;
+}
+
+.data-body > ul > li div.panel-footer{
+    padding: 0px 5px;
+    height: 40px;
+}
+
+.data-body > ul > li div.panel-footer div.bg-danger{
+    height: 40px;
+    width: 100%;
+}
+
+.data-body > ul > li div.panel-footer div.bg-danger div.coverage-label {
+    position: absolute;
+    margin-left: 50px;
+}
+
+
+.data-body > ul > li div.chart {
+     height: 200px;
+     display: inline-block;
+     width: 150px;
+}
+
+.data-body > ul > li div.chart-result {
+    height: 200px;
+    display: inline-block;
+    width: 69px;
+    vertical-align: top;
+    padding-top: 50px;;
+}
+
+.data-body > ul > li div.chart-result div.text {
+    font-size: 10px;
+}
+
+.data-body .item-result {
+    display: inline-block;
+    width: 200px;
+    padding-top: 20px;
+
+}
+
+.panel-body .clickable {
+    cursor: pointer;
+}

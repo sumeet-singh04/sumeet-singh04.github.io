@@ -1,0 +1,173 @@
+<div class="container body" >
+    <div class="row panel panel-default">
+        <div class="col-xs-3">Change List/Build</div>
+        <div class="col-xs-1">Owner</div>
+        <div class="col-xs-2">Time Started</div>
+        <div class="col-xs-2">State</div>
+        <div class="col-xs-1">Metrics</div>
+        <div class="col-xs-1">Build</div>
+        <div class="col-xs-1">Unit Test</div>
+        <div class="col-xs-1">Functional Test</div>
+    </div>
+    <accordion close-others="true" >
+        <accordion-group ng-repeat="item in ctlr.items" class="item-heading" ng-class="item.contextBg" ng-click="ctlr.fetchDetails(item,$index)" is-open="item.isOpen" is-disabled="item.status === 'P'">
+            <accordion-heading>
+                <div class="row" >
+                    <div class="col-xs-3"><span class="glyphicon" ng-class="item.icon"> </span>   {{item.changeListTitle}} </div>
+                    <div class="col-xs-1">{{item.owner}}</div>
+                    <div class="col-xs-2">{{item.timeStarted}}</div>
+                    <div class="col-xs-2">{{item.dispStatus}}</div>
+                    <div class="col-xs-1" ng-hide="item.isOpen">
+                        <div class="square" ng-class="item.metricBg"></div>
+                    </div>
+                    <div class="col-xs-1 " ng-hide="item.isOpen">
+                        <div class="square" ng-class="item.buildBg"></div>
+                    </div>
+                    <div class="col-xs-1 " ng-hide="item.isOpen">
+                        <div class="square" ng-class="item.unitTestBg"></div>
+                    </div>
+                    <div class="col-xs-1 " ng-hide="item.isOpen">
+                        <div class="square" ng-class="item.functionalTestBg"></div>
+                    </div>
+                </div>
+            </accordion-heading>
+            <div class="data-body">
+                <ul>
+                    <li>
+                        <div class="panel" ng-class="item.detail.metric.contextBg" ng-click="ctlr.openInfoModal();">
+                            <div class="panel-heading clickable">Metrics <span class="glyphicon glyphicon-info-sign pull-right"></span></div>
+                            <div class="panel-body clickable" >
+                                <div class="metric-row-1 text-center">
+                                    <div>
+                                        <h3 ng-class="item.detail.metric.testContext">
+                                            <div class="glyphicon glyphicon-chevron-up" ng-if="item.detail.metric.testStatus == 'S'"></div>
+                                            <div>{{item.detail.metric.testScore}}</div>
+                                            <div class="glyphicon glyphicon-chevron-down" ng-if="item.detail.metric.testStatus == 'F'"></div>
+                                            <p><strong>Test</strong></p>
+                                        </h3>
+                                    </div>
+                                    <div>
+                                        <h3 ng-class="item.detail.metric.maintainabilityContext">
+                                            <div class="glyphicon glyphicon-chevron-up" ng-if="item.detail.metric.maintainabilityStatus == 'S'"></div>
+                                            <div>{{item.detail.metric.maintainabilityScore}}</div>
+                                            <div class="glyphicon glyphicon-chevron-down" ng-if="item.detail.metric.maintainabilityStatus == 'F'"></div>
+                                            <p>
+                                                <strong>Maintainability</strong>
+                                            </p>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="metric-row-2 text-center">
+                                    <div>
+                                        <h4>{{item.detail.metric.security}}
+                                            <div class="glyphicon glyphicon-chevron-right"></div>
+                                            <p><strong>Security</strong></p>
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        <h4> {{item.detail.metric.workmanship}}
+                                            <div class="glyphicon glyphicon-chevron-right"></div>
+                                            <p><strong>Workmanship</strong></p>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="panel" ng-class="item.detail.build.contextBg" ng-click="ctlr.openInfoModal();">
+                            <div class="panel-heading clickable">Build <span class="glyphicon glyphicon-info-sign pull-right"></span></div>
+                            <div class="panel-body text-center build-body clickable">
+                                <div class="row-1">
+                                    <div>
+                                        <img src="images/img.jpg" alt="" class="img-rounded img-responsive">
+                                        <strong>Debug</strong>
+                                    </div>
+                                    <div>
+                                        <img src="images/img.jpg" alt="" class="img-rounded img-responsive">
+                                        <strong>Release</strong>
+                                    </div>
+                                </div>
+                                <div class="row-2">
+                                    <p>
+                                        {{item.detail.build.buildTime}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="panel" ng-class="item.detail.unitTest.contextBg" ng-click="ctlr.openInfoModal();">
+                            <div class="panel-heading clickable">Unit Tests <span class="glyphicon glyphicon-info-sign pull-right"></span></div>
+                            <div class="panel-body clickable" >
+                                <div id="unit-{{item.itemId}}-{{$index}}" class="chart">
+                                </div>
+                                <div class="chart-result">
+                                    <div><h3 ng-class="item.detail.unitTest.percentContext">{{item.detail.unitTest.percent}}</h3></div>
+                                    <div class="text">tests passed</div>
+                                </div>
+
+                            </div>
+                            <div class="panel-footer text-center">
+                                <div class="bg-danger">
+                                    <div class="progress-bar  progress-bar-success " role="progressbar" ng-style="{width : item.detail.unitTest.codeCoverage}">
+
+                                    </div>
+                                    <div class="coverage-label">
+                                        <strong>  <div ng-class="item.detail.unitTest.codeCoverageContext"> {{item.detail.unitTest.codeCoverage}}</div></strong>
+                                    <div>code coverage</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="panel" ng-class="item.detail.functionalTest.contextBg" ng-click="ctlr.openInfoModal();">
+                            <div class="panel-heading clickable">Functional Tests <span class="glyphicon glyphicon-info-sign pull-right"></span></div>
+                            <div class="panel-body clickable" >
+                                <div id="functional-{{item.itemId}}-{{$index}}" class="chart">
+                                </div>
+                                <div class="chart-result">
+                                    <div><h3 ng-class="item.detail.functionalTest.percentContext">{{item.detail.functionalTest.percent}}</h3></div>
+                                    <div class="text">tests passed</div>
+                                </div>
+
+                            </div>
+                            <div class="panel-footer text-center">
+                                <div class="bg-danger">
+                                    <div class="progress-bar  progress-bar-success " role="progressbar" ng-style="{width : item.detail.functionalTest.codeCoverage}">
+
+                                    </div>
+                                    <div class="coverage-label">
+                                        <strong>  <div ng-class="item.detail.functionalTest.codeCoverageContext"> {{item.detail.functionalTest.codeCoverage}}</div></strong>
+                                        <div>code coverage</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <div class="item-result text-center">
+                        Result
+                        <h5 ng-class="item.detail.result.contextBg">{{item.detail.result.resultMsg}}</h5>
+                        <h3  ng-class="item.detail.result.contextBg">{{item.detail.result.message}}</h3>
+                        <button class="btn btn-primary" ng-if="item.detail.result.status == 'W'"><span class="glyphicon glyphicon-search"></span> Merge Build</button>
+                        <button class="btn btn-primary" ng-if="item.detail.result.status == 'F'">Find Issues</button>
+                        <div ng-if="item.detail.result.status == 'S'">
+                            <button class="btn btn-primary">Deploy</button> To
+                            <div dropdown>
+                                <button class="btn btn-default dropdown-toggle">Production <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a>Production</a></li>
+                                    <li><a>Dev</a></li>
+                                    <li><a>QA</a></li>
+                                    <li><a>UAT</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </accordion-group>
+    </accordion>
+
+</div>
