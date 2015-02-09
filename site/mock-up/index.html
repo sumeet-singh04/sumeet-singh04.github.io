@@ -11,27 +11,29 @@
     <link href="lib/css/app.css" rel="stylesheet">
 
     <!--Polyfills-->
-    <!--[if IE < 9]>
-        <script>
-            document.createElement("<accordion>");
-            document.createElement("<accordion-group>");
-            document.createElement("<accordion-heading>");
-            document.createElement("<strong>");
-        </script>
-    <![endif]>
-
-
-        <!--Libraries-->
-
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("<accordion>");
+        document.createElement("<accordion-group>");
+        document.createElement("<accordion-heading>");
+        document.createElement("<strong>");
+    </script>
     <script src="lib/js/es5sham.min.js"></script>
     <script src="lib/js/es5shim.min.js"></script>
     <script src="lib/js/respond.js"></script>
-    <script src="lib/js/lodash.min.js"></script>
-    <script src="lib/js/jquery.min.js"></script>
+    <![endif]-->
+
+
+    <!--Libraries-->
+
+
+
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="lib/js/highcharts.js"></script>
-    <script src="lib/js/angular.min.js"></script>
-    <script src="lib/js/angular-ui-router.min.js"></script>
-    <script src="lib/js/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 
 
 
