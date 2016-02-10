@@ -1,0 +1,124 @@
+<html>
+<style>
+body {
+	background-color: black;
+}
+.tictactoe {
+	margin:auto;
+	text-align:center;
+}
+
+.tictactoe div{
+background-color: white;
+	width:200px;
+	height:200px;
+	display:inline-block;
+	border: 1px solid black;
+	box-sizing: border-box;
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 4;
+	vertical-align: middle;
+	-webkit-margin-after:0px;
+	-webkit-margin-before:0px;
+}
+
+
+#nextTurn {
+
+color: white;
+font-size: 50px;
+font-weight: bold;
+
+}
+</style>
+<body >
+<div id="nextTurn" style="text-align:center;">Next turn : X</div>
+<div class="tictactoe">
+	<div id="1" onclick="fill(0,0,1)"></div>
+	<div id="2" onclick="fill(0,1,2)"></div>
+	<div id="3" onclick="fill(0,2,3)"></div><br/>
+	<div id="4" onclick="fill(1,0,4)"></div>
+	<div id="5" onclick="fill(1,1,5)"></div>
+	<div id="6" onclick="fill(1,2,6)"></div><br/>
+	<div id="7" onclick="fill(2,0,7)"></div>
+	<div id="8" onclick="fill(2,1,8)"></div>
+	<div id="9" onclick="fill(2,2,9)"></div>
+</div>
+</body>
+<script>
+
+
+var Game_Array = [[],[],[]];
+var nmbrOfMoves = 0;
+var fillAlph = 'X';
+
+function fill(locationX,locationY, sqrt) {
+
+	if(!Game_Array[locationX][locationY]) {
+		Game_Array[locationX][locationY] = fillAlph;
+		document.getElementById(sqrt).textContent = fillAlph;
+	} else {
+	  return;
+	}
+	nmbrOfMoves++;
+	var isWinner = checkWinner(fillAlph);
+	if(isWinner) {
+		alert(fillAlph + ' Won !');
+		clear();
+		nmbrOfMoves = 0;
+	} else {
+		if(nmbrOfMoves >= 9) {
+			alert('Tie');
+			clear();
+			nmbrOfMoves = 0;
+			return;
+		}
+		fillAlph = fillAlph === 'X'?'O':'X';
+		document.getElementById('nextTurn').textContent = 'Next Turn : '+fillAlph;
+		
+	}
+	
+}
+
+function clear() {
+	for(var i=1;i<10;i++) {
+		document.getElementById(i).textContent = '';
+	}
+	Game_Array = [[],[],[]];
+}
+
+function checkWinner(alph) {
+	if(Game_Array[0][0] === alph) {
+		if(Game_Array[0][0] === Game_Array[0][1] && Game_Array[0][1] === Game_Array[0][2]) {
+			return true;
+		} else if(Game_Array[0][0] === Game_Array[1][0] && Game_Array[1][0] === Game_Array[2][0]) {
+			return true;
+		} else if(Game_Array[0][0] === Game_Array[1][1] && Game_Array[1][1] === Game_Array[2][2]) {
+			return true;
+		}
+	} else if(Game_Array[0][2] === alph) {
+		if(Game_Array[0][2] === Game_Array[1][2] && Game_Array[1][2] === Game_Array[2][2]) {
+			return true;
+		} else if(Game_Array[0][2] === Game_Array[1][1] && Game_Array[1][1] === Game_Array[2][0]) {
+			return true;
+		}
+	} else if(Game_Array[2][0] === alph) {
+		if(Game_Array[2][0] === Game_Array[2][1] && Game_Array[2][1] === Game_Array[2][2]) {
+			return true;
+		}
+	} else if(Game_Array[0][1] === alph) {
+		if(Game_Array[0][1] === Game_Array[2][1] && Game_Array[1][1] === Game_Array[2][1]) {
+			return true;
+		}
+	} else if(Game_Array[1][0] === alph) {
+		if(Game_Array[1][0] === Game_Array[1][1] && Game_Array[1][1] === Game_Array[1][2]) {
+			return true;
+		}
+	}
+	return false;
+
+}
+</script
+
+</html>
