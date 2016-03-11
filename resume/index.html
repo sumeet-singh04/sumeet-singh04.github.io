@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet'
+          type='text/css'/>
+    <link href="resume.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1">
+    <meta name="author" value="sumeetsingh.yaar@gmail.com">
+
+</head>
+<body onload="loadResume()">
+<header>
+    <div class="title trans-from-top">
+        <img src="images/platform-stack-icon.png" style="float: left;"/>
+        Front End UI Developer
+    </div>
+    <div class="name trans-from-left">Sumeet Singh</div>
+    <hr>
+</header>
+<section class="main-section">
+    <div class="side-menu">
+        <ul>
+            <li><a onclick="changeHash('summary')"> <img src="images/star.png" class="star"/>Summary</a></li>
+            <li><a onclick="changeHash('tech')"><img src="images/star.png" class="star"/>I work with ... </a></li>
+            <li><a onclick="changeHash('exp')"><img src="images/star.png" class="star"/>Projects</a></li>
+            <li><a onclick="changeHash('profile')"><img src="images/star.png" class="star"/>Profile</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div id="summary">
+            <div class="content-padding">
+                <div class="content-heading">
+                    Summary
+                </div>
+                <div class="description">
+                    <ul>
+                        <li> Total 2.5+ years of experience in analysis, design, and development of various web
+                            applications.
+                            <ul>
+                                <li> 2.5+ years of experience in User interface development and User experience
+                                    enhancement.
+                                </li>
+                                <li>2+ years of experience in unit testing of front end code and End-to-End testing of
+                                    Web applications.
+                                </li>
+                                <li>1+ years of experience in working with Core as well as Advanced Java.</li>
+                            </ul>
+                        </li>
+                        <li>Have in depth understanding of the Front End frameworks including AngularJS, Bootstrap,
+                            jQuery, and Ionic framework.
+                        </li>
+                        <li>Well versed in front end technologies including CSS3, HTML5, JQuery, JSF and JSP.</li>
+                        <li>Worked with Automation testing using Jasmine, Karma, Protractor, CucumberJS, Selenium.</li>
+                        <li>Code versioning tools like GIT (GitHub) and SVN.</li>
+                        <li>Created and worked Restful Web services for exposing Data to SPA applications and SOAP based
+                            web services for fetching/exposing data to third party applications.
+                        </li>
+                        <li>Used and worked in Agile modelled development environment using Jira, crucible.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="tech">
+            <div class="content-padding">
+                <div class="content-heading">
+                    I Work With...
+                </div>
+                <div class="description">
+                    <div>
+                        <img src="images/angular.png"/>
+                        <img src="images/sass-less.png"/>
+                        <img src="images/bootstrap.jpg"/>
+                        <img src="images/nodejs.png"/>
+                        <img src="images/jquery.png"/>
+                        <img src="images/moment-js.jpg"/>
+                        <img src="images/combined.png"/>
+                        <img src="images/ionic.png"/>
+                    </div>
+                    <div> And many more ...</div>
+                </div>
+            </div>
+        </div>
+        <div id="exp">
+            <div class="content-padding">
+                <div class="content-heading">
+                    Projects
+                </div>
+            </div>
+            <div class="description">
+                <ul class="projects">
+                    <li>
+                        <span class="project-name">StockPlan Connect </span>- Morgan Stanley
+                        <div class="project-role">My role was of a Front End Engineer. Working towards creating data
+                            centric screens using prototypes and style guides.
+                            <div class="date">From: March 2013 - October 2014</div>
+                            <a href="https://www.stockplanconnect.com/" target="_blank">Visit StockPlan Connect</a><br/>
+                            <a target="_blank"
+                               href="http://www.morganstanley.com/spc/knowledge/getting-started/managing-your-account/5-minute-overview-of-spc.html">View
+                                a video on SPC.</a>
+                        </div>
+                        <div class="project-accomplishment"></div>
+                    </li>
+                    <li>
+                        <span class="project-name">Incident Reporting and Regulatory Group Management System </span> -
+                        Morgan Stanley
+                        <div class="project-role">As a Front End Engineer I was tasked to create a reporting and
+                            managing system. This project was a real challenge as we had to come up with good UX without
+                            the presence of a UX designer.
+                            <div class="date">From: October 2014 - December 2014</div>
+                        </div>
+                        <div class="project-accomplishment"></div>
+                    </li>
+                    <li>
+                        <span class="project-name">StockPlan Connect Mobile </span>- Morgan Stanley
+                        <div class="project-role">
+                            I was tasked with creating a working POC using Ionic and AngularJS. Created underlying
+                            framework and best practices for other team members to follow.
+                            <div class="date">From: January 2015 - July 2015</div>
+                            <a href="https://itunes.apple.com/us/app/stockplan-connect/id1055368068" target="_blank">Visit
+                                on Apple App store.</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="profile">
+            <div class="content-heading">
+               Profile
+            </div>
+            <div class="description">
+               <p>2.5+ years of experience, enthusiastic front end developer with a Master's in MIS, I am equipped with knowledge of both worlds i.e. the Business Analysts and Developers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<script src="jquery.min.js"></script>
+<script async src="resume.js" type="text/javascript"></script>
+</html>

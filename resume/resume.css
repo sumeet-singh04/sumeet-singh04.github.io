@@ -1,0 +1,192 @@
+body {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 14px;
+    background: white;
+    padding: 80px;
+    background: url("images/back.jpg");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: cover;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+}
+
+header .title, header .name {
+    text-align: center;
+}
+
+header .title {
+    position: relative;
+    top: -400px;
+    font-size: 35px;
+}
+
+header .title img {
+    float: left;
+    width: 80px;
+}
+
+header .name {
+    position: relative;
+    left: -100%;
+    font-size: 20px;
+}
+
+header .trans-from-top {
+    transition: top ease-in-out 0.2s;
+}
+
+header .trans-from-left {
+    transition: left ease-in-out 0.4s;
+}
+
+header .title.in-view {
+    top: 0px;
+}
+
+header .name.in-view {
+    left: 0px;
+}
+
+.main-section {
+    width: 100%;
+    overflow: hidden;
+    min-height: 600px;
+    height: 600px;
+}
+
+.main-section .side-menu {
+    width: 0px;
+    height: 100%;
+    display: inline-block;
+    background: rgba(32, 60, 117, 0.52);
+    overflow: hidden;
+    transition: width ease-in-out 0.2s;
+    float: left;
+}
+
+.main-section .side-menu.in-view {
+    width: 30%;
+}
+
+.side-menu > ul {
+    list-style: none;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.side-menu > ul > li {
+    list-style: none;
+    border-bottom: 1px solid #ededed;
+    color: white;
+    height: 45px;
+    display: block;
+}
+
+.side-menu > ul > li > a {
+    color: white;
+    width: 100%;
+    text-decoration: inherit;
+    padding: 10px;
+    display: block;
+}
+
+.side-menu > ul > li > a:active {
+    background: white;
+    color: #c0bcc1;
+}
+
+.main-section .main-content {
+    width: 0px;
+    display: inline-block;
+    height: 100%;
+    background: rgba(99, 158, 174, 0.64);
+    transition: width ease-in-out 0.2s 0.1s;
+    color: white;
+    float: right;
+    transition: background-color ease-in-out 0.2s;
+}
+
+.main-section .main-content.in-view {
+    width: 69.7%;
+}
+
+.main-content > div {
+    text-align: center;
+    position: relative;
+    top: 4000px;
+    transition: top ease-in-out 0.4s 0.3s;
+    height: 0px;
+}
+
+.main-content > div > div.content-padding {
+    padding: 15px;
+}
+
+.main-content > div.in-view > div.content-padding {
+    height: 100%;
+}
+
+.main-content > div.in-view {
+    top: 0px;
+    height: auto;
+}
+
+.main-content .content-heading {
+    font-size: 25px;
+}
+
+.main-content .description {
+    text-align: left;
+}
+
+.main-content .description li {
+    font-size: 22px;
+    line-height: 25px;
+    padding: 5px;
+}
+
+#tech .description > div {
+    clear: both;
+    display: inline-block;
+    width: 100%;
+}
+
+#tech img {
+    opacity: 0;
+    transition: all ease-in-out 0.4s 1s;
+    height: 150px;
+    float: left;
+    box-shadow: 0px 1px 3px #DAA9D4;
+    margin: 10px;
+}
+
+#tech.in-view img {
+    opacity: 1;
+}
+
+#exp .projects > li {
+    padding: 10px;
+}
+
+#exp .projects .project-name {
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.project-role {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.project-role > .date, .project-role > a {
+    font-size: 12px;
+    text-decoration: underline;
+    color: #EFEFEF;
+}
+
