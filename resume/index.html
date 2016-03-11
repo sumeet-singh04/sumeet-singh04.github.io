@@ -5,6 +5,7 @@
     <title>Hello</title>
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet'
           type='text/css'/>
+    <link rel="icon" href="favicon.png"/>
     <link href="resume.css" rel="stylesheet" type="text/css"/>
     <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1">
     <meta name="author" value="sumeetsingh.yaar@gmail.com">
@@ -13,11 +14,11 @@
 <body onload="loadResume()">
 <header>
     <div class="title trans-from-top">
-        <img src="images/platform-stack-icon.png" style="float: left;"/>
+        <img src="images/platform-stack-icon.png"/>
         Front End UI Developer
     </div>
     <div class="name trans-from-left">Sumeet Singh</div>
-    <hr>
+    <hr/>
 </header>
 <section class="main-section">
     <div class="side-menu">
@@ -25,7 +26,7 @@
             <li><a onclick="changeHash('summary')"> <img src="images/star.png" class="star"/>Summary</a></li>
             <li><a onclick="changeHash('tech')"><img src="images/star.png" class="star"/>I work with ... </a></li>
             <li><a onclick="changeHash('exp')"><img src="images/star.png" class="star"/>Projects</a></li>
-            <li><a onclick="changeHash('profile')"><img src="images/star.png" class="star"/>Profile</a></li>
+            <li><a onclick="changeHash('profile')"><img src="images/star.png" class="star"/>Profile & Demo</a></li>
         </ul>
     </div>
     <div class="main-content">
@@ -35,30 +36,12 @@
                     Summary
                 </div>
                 <div class="description">
-                    <ul>
-                        <li> Total 2.5+ years of experience in analysis, design, and development of various web
-                            applications.
-                            <ul>
-                                <li> 2.5+ years of experience in User interface development and User experience
-                                    enhancement.
-                                </li>
-                                <li>2+ years of experience in unit testing of front end code and End-to-End testing of
-                                    Web applications.
-                                </li>
-                                <li>1+ years of experience in working with Core as well as Advanced Java.</li>
-                            </ul>
-                        </li>
-                        <li>Have in depth understanding of the Front End frameworks including AngularJS, Bootstrap,
-                            jQuery, and Ionic framework.
-                        </li>
-                        <li>Well versed in front end technologies including CSS3, HTML5, JQuery, JSF and JSP.</li>
-                        <li>Worked with Automation testing using Jasmine, Karma, Protractor, CucumberJS, Selenium.</li>
-                        <li>Code versioning tools like GIT (GitHub) and SVN.</li>
-                        <li>Created and worked Restful Web services for exposing Data to SPA applications and SOAP based
-                            web services for fetching/exposing data to third party applications.
-                        </li>
-                        <li>Used and worked in Agile modelled development environment using Jira, crucible.</li>
-                    </ul>
+                    <div class="round-div uidev"><div class="transparency">UI Developer</div></div>
+                    <div class="round-div agile"><div class="transparency">Agile</div></div>
+                    <div class="round-div tdd"></div>
+                    <div class="round-div rest"><div class="transparency">RESTFull API</div></div>
+                    <div class="round-div exp"><div class="transparency">2.5+ Yrs Experience</div></div>
+                    <div class="round-div mis"><div class="transparency">MS in MIS</div></div>
                 </div>
             </div>
         </div>
@@ -126,11 +109,44 @@
             </div>
         </div>
         <div id="profile">
-            <div class="content-heading">
-               Profile
-            </div>
-            <div class="description">
-               <p>2.5+ years of experience, enthusiastic front end developer with a Master's in MIS, I am equipped with knowledge of both worlds i.e. the Business Analysts and Developers.</p>
+            <div class="content-padding">
+                <div class="content-heading">
+                    Profile
+                </div>
+                <div class="description">
+                    <h3>2.5+ years of experience, enthusiastic front end developer with a Master's in MIS, I am equipped
+                        with
+                        knowledge of both worlds i.e. the Business Analysts and Developers.</h3>
+
+                    <h3>Below you will find some of the stuff I have been working on. Feel free to browse through
+                        them:</h3>
+                    <ul>
+                        <li>
+                            <span class="project-name">TicTacToe Game <a href=""><img src="images/git.png" width="30"
+                                                                                      height="30"/></a></span>
+
+                            <div class="project-role row">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="project-name">Project Timeline - WIP <a href=""><img src="images/git.png"
+                                                                                              width="30"
+                                                                                              height="30"/></a></span>
+                        </li>
+                        <li>
+                            <span class="project-name">Portfolio <a href=""><img src="images/git.png" width="30"
+                                                                                 height="30"/></a></span>
+                        </li>
+                        <li><span class="project-name">TicTacToe Multiplyer - WIP <a href=""><img src="images/git.png"
+                                                                                                  width="30"
+                                                                                                  height="30"/></a></span>
+                        </li>
+                        <li><span class="project-name">Demo Build and deployment Info <a href=""><img
+                                src="images/git.png" width="30" height="30"/></a></span></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

@@ -6,7 +6,8 @@
     var bgColors = {
         summary: 'rgba(99, 158, 174, 0.64)',
         tech: 'rgba(192, 98, 98, 0.61)',
-        exp: 'rgba(28, 144, 192, 0.58)'
+        exp: 'rgba(28, 144, 192, 0.58)',
+        profile: 'rgba(121, 58, 188, 0.75)'
     }
     window.loadResume = function () {
         setTimeout(function () {
