@@ -25,4 +25,14 @@
         $('.main-content > div#' + id).addClass('in-view');
     };
 
+    window.showPopUp = function() {
+        $('.overlay').addClass('show');
+        $('.modal-wrapper').addClass('fade-in')
+    }
+
+    $('.overlay').click(function() {
+        $('.overlay').removeClass('show');
+        $('.modal-wrapper').removeClass('fade-in')
+    })
+
 })();

@@ -3,10 +3,11 @@ body {
     font-size: 14px;
     background: white;
     padding: 80px;
-    background: url("images/back.jpg");
+    background: url("images/relapse.jpg");
     background-repeat: no-repeat;
     background-position: center left;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .star {
@@ -19,9 +20,15 @@ header .title, header .name {
 }
 
 header .title {
-    position: relative;
-    top: -400px;
     font-size: 35px;
+    top: 150px;
+    position: relative;
+    transform: scale(0);
+}
+
+header .title.in-view {
+    top: 0px;
+    transform: scale(1);
 }
 
 header .title > img {
@@ -40,16 +47,16 @@ header .name {
 }
 
 header .trans-from-top {
-    transition: top ease-in-out 0.2s;
+    transition: transform ease-in-out 0.3s, top ease-in-out 0.2s 0.2s;
 }
 
 header .trans-from-left {
-    transition: left ease-in-out 0.4s;
+    transition: left ease-in-out 0.4s 0.4s;
 }
 
 header .title.in-view {
     top: 0px;
-    text-shadow:3px 2px 2px rgb(23, 49, 106);
+    text-shadow: 3px 2px 2px rgb(23, 49, 106);
 }
 
 header .name.in-view {
@@ -69,7 +76,7 @@ header .name.in-view {
     display: inline-block;
     background: rgba(32, 60, 117, 0.52);
     overflow: hidden;
-    transition: width ease-in-out 0.2s;
+    transition: width ease-in-out 0.2s 0.4s;
     float: left;
 }
 
@@ -90,6 +97,14 @@ header .name.in-view {
     color: white;
     height: 45px;
     display: block;
+    transition: transform 0.3s;
+}
+.side-menu > ul > li:hover {
+    transform: scale(1.5);
+}
+
+.side-menu > ul > li:hover > * {
+    text-align: center;
 }
 
 .side-menu > ul > li img {
@@ -114,10 +129,9 @@ header .name.in-view {
     display: inline-block;
     height: 100%;
     background: rgba(99, 158, 174, 0.64);
-    transition: width ease-in-out 0.2s 0.1s;
+    transition: width ease-in-out 0.2s 0.4s, background-color ease-in-out 0.2s;
     color: white;
     float: right;
-    transition: background-color ease-in-out 0.2s;
 }
 
 .main-section .main-content.in-view {
@@ -184,15 +198,20 @@ header .name.in-view {
 .round-div.agile {
     background: url("images/agile.png") round;
 }
+
 .round-div.tdd {
     background: url("images/TDD.png") round;
 }
+
 .round-div.rest {
     background: url("images/restpng.png") round;
 }
+
 .round-div.exp {
     background: url("images/exp.png") round;
-}.round-div.mis {
+}
+
+.round-div.mis {
     background: url("images/mis.png") round;
 }
 
@@ -247,3 +266,86 @@ header .name.in-view {
     color: #EFEFEF;
 }
 
+.half-square {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    position: absolute;
+
+    margin: 50px;
+    animation: rotate50 2s;
+    animation-iteration-count: infinite;
+}
+
+
+.top-left {
+    top: 0px;
+    left: 0px;
+}
+
+.top-right {
+    top:0px;
+    right: 0px;
+}
+.top-right .vertical {
+    margin-left:80px;
+}
+
+.half-square .horzntl {
+    width: 100%;
+    height: 20px;
+}
+
+.half-square .vertical {
+    width: 20px;
+    height: 100%;
+}
+
+.half-square > div {
+    background-color: #ff747c;
+}
+
+
+@keyframes rotate50 {
+    0% {transform:rotate(0deg);opacity:1;}
+    25% {transform:rotate(45deg);opacity:0.5;}
+    50% {transform:rotate(0deg);opacity: 1}
+    75% {transform:rotate(-45deg); opacity: 0.5}
+    100% {transform:rotate(0deg); opacity: 1}
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0px;
+    left:0px;
+    z-index: -100;
+    opacity: 0;
+    transition: opacity ease-in 0.2s;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(64, 62, 62, 0.7);
+}
+
+.overlay.show {
+    opacity: 1;
+    z-index: 1000;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: -10000px;
+    left: 35%;
+    opacity: 0;
+    transition: top ease-in-out 0.3s, opacity 0.1s 0.1s;
+    z-index: 1000;
+    width: 30%;
+    height: 30%;
+    background-color: white;
+    box-shadow: 0px 3px 4px grey;
+}
+
+.modal-wrapper.fade-in {
+    top:100px;
+    opacity: 1;
+}

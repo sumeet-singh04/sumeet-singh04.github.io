@@ -12,10 +12,18 @@
 
 </head>
 <body onload="loadResume()">
+<div class="half-square top-left">
+    <div class="horzntl"></div>
+    <div class="vertical"></div>
+</div>
+<div class="half-square top-right">
+    <div class="horzntl"></div>
+    <div class="vertical"></div>
+</div>
 <header>
     <div class="title trans-from-top">
         <img src="images/platform-stack-icon.png"/>
-        Front End UI Developer
+        Senior Front End UI Developer
     </div>
     <div class="name trans-from-left">Sumeet Singh</div>
     <hr/>
@@ -27,6 +35,7 @@
             <li><a onclick="changeHash('tech')"><img src="images/star.png" class="star"/>I work with ... </a></li>
             <li><a onclick="changeHash('exp')"><img src="images/star.png" class="star"/>Projects</a></li>
             <li><a onclick="changeHash('profile')"><img src="images/star.png" class="star"/>Profile & Demo</a></li>
+            <li><a onclick="showPopUp('')"><img src="images/star.png" class="star"/>Contact Me</a></li>
         </ul>
     </div>
     <div class="main-content">
@@ -131,19 +140,19 @@
                             </div>
                         </li>
                         <li>
-                            <span class="project-name">Project Timeline - WIP <a href=""><img src="images/git.png"
+                            <span class="project-name">Project Timeline - WIP <a href="http://tinyurl.com/zm9zfvs"><img src="images/git.png"
                                                                                               width="30"
                                                                                               height="30"/></a></span>
                         </li>
                         <li>
-                            <span class="project-name">Portfolio <a href=""><img src="images/git.png" width="30"
+                            <span class="project-name">Portfolio <a href="http://tinyurl.com/jyjd8op"><img src="images/git.png" width="30"
                                                                                  height="30"/></a></span>
                         </li>
-                        <li><span class="project-name">TicTacToe Multiplyer - WIP <a href=""><img src="images/git.png"
+                        <li><span class="project-name">TicTacToe Multiplyer - WIP <a href="http://tinyurl.com/zwmdazs"><img src="images/git.png"
                                                                                                   width="30"
                                                                                                   height="30"/></a></span>
                         </li>
-                        <li><span class="project-name">Demo Build and deployment Info <a href=""><img
+                        <li><span class="project-name">Demo Build and deployment Info <a href="https://github.com/sumeet-singh04/sumeet-singh04.github.io/tree/master/site/mock-up"><img
                                 src="images/git.png" width="30" height="30"/></a></span></li>
                     </ul>
                 </div>
@@ -151,6 +160,11 @@
         </div>
     </div>
 </section>
+<div class="overlay">
+</div>
+<div class="modal-wrapper">
+
+</div>
 </body>
 <script src="jquery.min.js"></script>
 <script async src="resume.js" type="text/javascript"></script>
