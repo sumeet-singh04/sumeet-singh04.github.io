@@ -1,0 +1,18 @@
+{
+  "name": "me",
+  "authors": [
+    "sumeet-singh04 <sumeet_singh871@yahoo.com>"
+  ],
+  "description": "Profile",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
