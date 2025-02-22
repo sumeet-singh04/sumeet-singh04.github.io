@@ -1,313 +1,221 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
- <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sumeet Singh</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumeet Singh</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <style>
+        body {
+            font-family: monospace;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-
-<link rel="stylesheet" href="bootstrap.theme.min.css"/>
-<link rel="stylesheet" href="index.css"/>
-<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-<body id="top">
-  <nav class="navbar navbar-default navbar-fixed-top">
+<body>
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+        <div class="progress-percentage">0%</div>
+    </div>
     <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#top">
-        Sumeet Singh
-      </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right page-scroll">
-        <li><a href="#aboutme">About Me</a></li>
-        <li><a href="#techs">Techs</a></li>
-        <li><a href="#">Contact me</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<div class="wrapper">
-  <div class="container navbar-inverse container-height">
-      <div class="row">
-        <div class="col-xs-12 text-center">
-
-            <h3>
-            Software Engineer
-            <br/>
-            Full Stack Web application developer
-          </h3>
-          <!-- particles.js container -->
-          <div id="particles-js"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-4 col-xs-offset-4">
-          <div class="row">
-            <div class="col-xs-6 col-xs-offset-3">
-              <div class="profile-img text-center">
-                <img src="profile_half.jpg" alt="my-image" class="img-responsive"/>
-              </div>
+        <header>
+            <div class="header-content">
+                
+                <nav class="top-nav">
+                    <h1>Sumeet Singh</h1>
+                    <div class="nav-links">
+                        <ul>
+                            <li><a href="#summary">Summary</a></li>
+                            <li><a href="#technologies">Technologies</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#education">Education</a></li>                            
+                            <li><a href="#contact">Contact</a></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="hamburger-menu">
+                        <button class="menu-button">Menu</button>
+                        <div class="menu-content">
+                            <ul>
+                                <li><a href="#summary">Summary</a></li>
+                                <li><a href="#technologies">Technologies</a></li>
+                                <li><a href="#experience">Experience</a></li>
+                                <li><a href="#education">Education</a></li>                                
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </div>
-          </div>
+        </header>
+        
+        <div class="content">
+            <section id="summary" class="summary-section">
+                <div class="summary-text-top">
+                    <p>
+                        <i class="fas fa-user-tie"></i> Principal Software Engineer with 11+ years of experience in building and deploying enterprise-scale software solutions. Expertise in software architecture, microservices, distributed systems, cloud technologies, and agile methodologies                    
+                    </p>
+                </div>
+                <div style="display: flex;">
+                    <div class="summary-image" style="text-align: center;">
+                        <img src="images/Sumeet Singh Medium.jpg" alt="Sumeet Singh" class="profile-image" style="height: 100%;">
+                    </div>
+                    <div class="summary-text-right">
+                        <ul>
+                            <li><i class="fas fa-cogs"></i> Defining architectural principles and design patterns for resilient, loosely coupled microservices and web applications, driving maintainability and scalability.</li>
+                            <li><i class="fas fa-cloud"></i> Establishing a DevOps-driven approach to automate the build, deployment, and monitoring on cloud platforms, leveraging cloud-native technologies to meet fluctuating demand.</li>
+                            <li><i class="fas fa-network-wired"></i> Incorporating innovative practices such as service mesh and event-driven architectures to enhance the microservices' capabilities.</li>
+                            <li><i class="fas fa-users"></i> Leading cross-functional collaborations with product owners, architects, software developers, and external stakeholders to interpret business challenges, and implement data-driven solutions aligned with strategic objectives.</li>
+                            <li><i class="fas fa-chalkboard-teacher"></i> Providing technical leadership in a fast-paced Agile environment, setting coding standards and guidelines.</li>
+                            <li><i class="fas fa-comments"></i> Prioritizing effective communication by sharing relevant information with the team at the appropriate time and detail, fostering a culture of coaching and mentoring.</li>
+                        </ul>
+                    </div>
+                </div>            
+            </section>
+            
+            <section id="technologies" class="centered-section">
+                <h2><i class="fas fa-laptop-code"></i> Technologies</h2>
+                <ul>
+                    <li><strong><i class="fas fa-code"></i> Programming Languages:</strong> Java, JavaScript, Typescript, SQL, HTML, CSS, WebGL</li>
+                    <li><strong><i class="fas fa-cogs"></i> Frameworks:</strong> Spring Framework, React, Angular, Express.js, Electron JS, Stencil, Web Components, Ionic, Hibernate/Eclipse Link/JOOQ, RxJS</li>
+                    <li><strong><i class="fas fa-cloud"></i> Cloud:</strong> AWS, Kubernetes (AWS EKS, OpenShift, GCP), Cloud Foundry, Docker</li>
+                    <li><strong><i class="fas fa-stream"></i> Event Streaming:</strong> Kafka, RabbitMQ, IBM MQ, Redis, AWS SQS, MQTT</li>
+                    <li><strong><i class="fas fa-database"></i> Relational and NoSQL Databases:</strong> PostgreSQL, Oracle, MongoDB, Couchbase, Redis, IndexDB for the Web, MySQL</li>
+                    <li><strong><i class="fas fa-tools"></i> Tools:</strong> Rally, JIRA, Git, Jenkins, Gitlab, HELM, Kustomize, Figma</li>
+                    <li><strong><i class="fas fa-chart-line"></i> Embedded Analytics, Monitoring & Observability:</strong> Open Telemetry, Jaeger, Grafana, Prometheus, fluentD, Kibana, Sisense, Dynatrace, Datadog</li>
+                    <li><strong><i class="fas fa-shield-alt"></i> Testing, Security & Code Analysis:</strong> Jest, Mocha, Jasmine, Selenium, JMeter, Mockito, JProfiler, Web driver BiDi, Puppeteer, Cypress, Polaris, Blackduck, SonarQube</li>
+                </ul>
+            </section>
+            
+            <section id="experience" class="centered-section">
+                <h2><i class="fas fa-briefcase"></i> Experience</h2>
+                <div class="job">
+                    <h3>
+                        <i class="fas fa-building"></i> WABTEC (Westinghouse Airbrake Technologies)                        
+                    </h3>
+                    <p><i class="fas fa-user-tie"></i> Principal Software Engineer / 2024 - Present</p>
+                    <p><i class="fas fa-user-tie"></i> Staff Software Engineer / 2023 - 2024</p>
+                    <p><i class="fas fa-user-tie"></i> Senior Software Engineer / 2019 - 2021</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Chicago, IL</p>
+                    <ul>
+                        <li><i class="fas fa-tasks"></i> Design distributed systems and implement components for enterprise-scale software solutions, leading design discussions and troubleshooting issues.</li>
+                        <li><i class="fas fa-users-cog"></i> Collaborate with customer operations team, product, and industry SMEs to define and refine product requirements.</li>
+                        <li><i class="fas fa-calendar-alt"></i> Develop multi-year software delivery strategies, and define SAAS business model with leadership</li>
+                        <li><i class="fas fa-recycle"></i> Drive efficiency by building reusable libraries and components</li>
+                        <li><i class="fas fa-handshake"></i> Collaborated closely with customer and cross-functional teams to understand requirements, address challenges, and ensure successful product delivery.</li>
+                    </ul>
+                    <section id="projects" class="centered-section">
+                        <h3><i class="fas fa-project-diagram"></i> Projects</h3>
+                        <div class="project">
+                            <h3><i class="fas fa-train"></i> NextGen Terminal Operating System (NGTOS) & Field Execution Windows Tablet App (FLEX)</h3>
+                            <p>
+                                NextGen Terminal Operating System (NGTOS) is an inventory, operations management, and scheduling solution for railroad intermodal terminal operations. NGTOS, built on cutting-edge technology, addresses the needs for automation and operational optimizations.
+                                Field Execution Windows Tablet App (FLEX) allows equipment operators and crew members to report work as per the optimized plan generated by NGTOS.
+                            </p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> <span class="highlight">Helped define & execute strategy</span> to remove redundant data processing steps and add redundancies to single points of failures.</li>
+                                <li><i class="fas fa-check-circle"></i> <span class="highlight">Drove the transition</span> of the user web application to angular components from Polymer.</li>
+                                <li><i class="fas fa-check-circle"></i> <span class="highlight">Designed and built foundations for real time live updates</span> for the web application, using web sockets, Redis and Kafka.</li>
+                                <li><i class="fas fa-check-circle"></i> As a Staff software engineer role, <span class="highlight">led negotiations, design decisions and agreements</span> with customer technology solutions teams for defining the deployment architecture for on-prem OpenShift container platform. This included key foundational decisions including <span class="highlight">migration to Kafka from RabbitMQ<span>, Oracle Database support, legacy mainframe integration ICD’s, 3rd party system integrations and networking/communication setup.</li>
+                                <li><i class="fas fa-check-circle"></i> <span class="highlight">Solved the challenge of limited network connectivity</span> by architecting an offline-first solution for the Windows tablet application, delivering a superior user experience, and gaining a <span class="highlight">competitive advantage</span>.</li>
+                                <li><i class="fas fa-check-circle"></i> Played a pivotal role in the successful initial product launch in August 2023. I was recognized by leadership on both sides for my significant contributions during this product launch.</li>
+                                <li><i class="fas fa-check-circle"></i> Currently working with cross-functional teams to deliver a solution for railroad intermodal terminals.</li>
+                                <li><i class="fas fa-check-circle"></i> As Principal software engineer, I am working on <span class="highlight">defining and implementing strategies to solidify the product foundations</span> while bringing more 3rd party <span class="highlight">system integrations</span>, providing end users the ability to run operations from a single point, <span class="highlight">reducing decision making overhead</span>, ensuring users are able to focus on important exception handling processes.</li>
+                            </ul>
+                        </div>
+                        <div class="project">
+                            <h3><i class="fas fa-palette"></i> Volt Design System & Component Library</h3>
+                            <p>
+                                Volt Design System & Component Library is Wabtec’s internal web application UI design system and component library. 
+                                Built using Stencil and complies with Web Component standard, the component library is framework agnostic and can be used with major UI development frameworks like React, Angular and VueJS.
+                            </p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Served as a key member of the leadership team responsible for building a reusable component library.</li>
+                                <li><i class="fas fa-check-circle"></i> Collaborated closely with UX designers and developers from a vendor team to ensure the component library met user experience and technical requirements.</li>
+                                <li><i class="fas fa-check-circle"></i> Provided subject matter expertise in UI development and front-end engineering to guide the design and implementation of the component library.</li>
+                                <li><i class="fas fa-check-circle"></i> Contributed to the overall success of the project by facilitating cross-functional collaboration and driving the development of high-quality, reusable UI components.</li>                                
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="job">
+                    <h3>
+                        Senior Software Engineer
+                    </h3>
+                    <p>Senior Software Engineer / 2018 - 2019</p>
+                    <p>Software Engineer / 2016 - 2018</p>                    
+                    <p>Chicago, IL</p>                    
+                    <section id="projects" class="centered-section">
+                        <h3>Projects</h3>
+                        <div class="project">
+                            <h3>Smart Automotive Terminal (SAT) (Web App) & Inspections Hybrid Mobile App</h3>
+                            <p>
+                                Smart Automotive Terminal (SAT) (Web App) & Inspections Hybrid Mobile App is a railroad automotive terminal inventory, and operations management, which tracks vehicle movement between rail operators, automotive dealers, and manufacturers. The project aims to streamline processes, operations and minimizes manual reporting which boosts operational capacity and reduces costs for railroad corporations.
+                                As a full stack developer, I joined the team and filled the gap of a resource who could understand the intricacies of micro service architecture as well as lead the front-end development. We worked on cutting edge micro service-based backend architecture and bleeding edge front end technologies like Angular, Polymer & Typescript.
+                                I defined the front-end architecture as well as coached/mentored the team on UI technologies/frameworks. Besides this, I also took up tasks as the sole UI developer on the team to work with UX and guide their efforts to build prototypes as per product requirements meanwhile ensuring the designs could be delivered in strict timelines.
+                            </p>                            
+                        </div>
+                    </section>
+                </div>
+                <div class="job">
+                    <h3>
+                        Oranj
+                    </h3>
+                    <p>Frontend Developer / 2016</p>                    
+                    <p>Chicago, IL</p>                    
+                    <section id="projects" class="centered-section">
+                        <h3>Projects</h3>
+                        <div class="project">
+                            <h3>Oranj Advisor & Client Engagement Platform</h3>
+                            <p>
+                                Collaborated with business analysts and UX designers to build user interface mocks and redesign applications for minimum viable products, including the Oranj Advisor Portal and Oranj Client Dashboard.
+                                At Oranj, I joined as a frontend software engineer to work with the offshore Team, bringing the product development up to speed and enabling the Team with top notch build and deployment tools. My role in the team consisted of multiple responsibilities, ranging from a full stack developer to playing a major part in the design & architecture of the application.
+                            </p>                            
+                        </div>
+                    </section>
+                </div>
+                <div class="job">
+                    <h3>
+                        Morgan Stanley (Infosys Technologies Ltd, Vendor)
+                    </h3>
+                    <p>Senior Systems Engineer / 2015</p>   
+                    <p>Systems Engineer / 2013 - 2015</p>                 
+                    <p>Chicago, IL</p>                    
+                    <section id="projects" class="centered-section">
+                        <h3>Projects</h3>
+                        <div class="project">
+                            <h3>Stock Plan Connect (SPC)</h3>
+                            <p>
+                                Developed proof of concept applications for cross-platform development and implemented web applications and services using Agile methodologies and CI/CD practices, contributing to projects for Morgan Stanley, including SPC Mobile, IRRG Incident Tracker, and Stock Plan Connect
+                            </p>                            
+                        </div>
+                    </section>
+                </div>
+                <!-- Repeat for other jobs -->
+            </section>
+            
+            <section id="education" class="centered-section">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="education-item">
+                    <h3><i class="fas fa-university"></i> MS in Information technology (MS IT/MIS) - Northern Illinois University</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Illinois, USA | Dec, 2016</p>
+                </div>                
+                <div class="education-item">
+                    <h3><i class="fas fa-university"></i> Bachelor of Technology in Electronics & Communication Engineering - Punjabi University</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Punjab, India | May, 2012</p>
+                </div>
+                <!-- Repeat for other degrees -->
+            </section>
+            
+            <footer class="centered-section">
+                <section id="contact">
+                    <h2><i class="fas fa-envelope"></i> Contact</h2>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:singh.sumeet871@gmail.com" style="color: white;">singh.sumeet871@gmail.com</a> | <a href="https://www.linkedin.com/in/sumeetsingh4/"><i class="fab fa-linkedin fa-lg" style="color: white;"></i></a></p>
+                </section>
+                <p>© 2025 Sumeet Singh. All rights reserved.</p>
+            </footer>
         </div>
-      </div>
-  </div>
-</div>
-  <div class="container" id="aboutme">
-    <div class="row">
-      <div class="col-xs-12 text-center">
-        <hr class="star glyphicon glyphicon-star" width="100%"/>
-      </div>
     </div>
-  </div>
-
-<div class="container" >
-  <div class="row">
-    <div class="col-xs-5">
-      <h2>ABOUT ME</h2>
-    </div>
-    <div class="col-xs-7">
-    </div>
-  </div>
-</div>
-
-  <div class="container container-height">
-    <div class="row">
-      <div class="col-xs-12">
-          <p class="text-primary about">Hello there! Welcome. I am Sumeet.
-            I am a full stack developer, working on bleading edge technologies to build scalable enterprise solutions and web applications.
-            <br/>
-            <br/>
-            Passionate about learning new technologies, I always strive to find elegant solutions to complex problems.
-            <br/>
-            <br/>
-            My newest gig involves working with GE Transportation to help build a state of the art web application to monitor and manager rail transportation channels.
-            I am an agilist in the making and IOT in the learning.
-            <br/>
-            <br/>
-            Here you can find information related to the technologies I work with as well as
-            organizations & applications I have worked with.
-          </p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <div class="round-div uidev">
-          <div class="float-msg">
-          UI Developer
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 text-center">
-        <div class="round-div agile">
-          <div class="float-msg">
-          Agile
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 text-center">
-        <div class="round-div tdd">
-          <div class="float-msg">
-          Test driven Develop.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <div class="round-div restful">
-          <div class="float-msg">
-        CLOUD & REST API
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 text-center">
-        <div class="round-div exp">
-          <div class="float-msg">
-          4+ yrs Exp
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 text-center">
-        <div class="round-div mis">
-          <div class="float-msg">
-          MS MIS
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<div class="container" id="techs">
-  <div class="row">
-    <div class="col-xs-12 text-center">
-      <hr class="star glyphicon glyphicon-star" width="100%"/>
-    </div>
-  </div>
-</div>
-
-<div class="container" >
-  <div class="row">
-    <div class="col-xs-5">
-      <h2>TECHNOLOGIES</h2>
-    </div>
-    <div class="col-xs-7">
-    </div>
-  </div>
-</div>
-
-<div class="container container-height" >
-  <div class="row">
-    <div class="col-xs-12">
-      <p> Over the period of my 4+ years of experience, I have learned and worked with several technologies forming different tech stacks.
-        Working on different combination of technologies has enabled me to work as a Full Stack Developer.
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 text-center">
-      <div class="round-div bootstrap">
-        <div class="float-msg">
-        BOOTSTRAP
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center">
-      <div class="round-div angular">
-        <div class="float-msg">
-        AngularJs & Angular
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center">
-      <div class="round-div nodejs">
-        <div class="float-msg">
-        Node JS
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center">
-      <div class="round-div ionic">
-        <div class="float-msg">
-        Ionic
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center">
-      <div class="round-div git">
-        <div class="float-msg">
-        GIT
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center">
-      <div class="round-div grunt">
-        <div class="float-msg">
-        Grunt Yeoman Gulp Bower
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center">
-      <div class="round-div predix">
-        <div class="float-msg">
-        Predix
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center">
-      <div class="round-div pcf">
-        <div class="float-msg">
-        BDD Testing
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center">
-      <div class="round-div boot">
-        <div class="float-msg">
-        Sprint boot
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center">
-      <div class="round-div jasmine">
-        <div class="float-msg">
-        Unit testing
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center">
-      <div class="round-div react">
-        <div class="float-msg">
-        React
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 text-center">
-      <div class="round-div typescript">
-        <div class="float-msg">
-        Angular + Typescript
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <footer>
-  </footer>
-
-<script src="jquery.min.js"></script>
-<script src="jquery-ui.min.js"></script>
-<script src="classie.js"></script>
-<script src="cbpAnimatedHeader.js"></script>
-<script src="bootstrap.min.js"></script>
-<script src="particles.min.js"></script>
-<script>
-$(function() {
-  particlesJS.load('particles-js', 'particlesjs-config.json');
-
-  // Highlight the top nav as scrolling occurs
-$('body').scrollspy({
-    target: '.navbar-fixed-top'
-});
-
-$('body').on('click', '.page-scroll a', function(event) {
-       var $anchor = $(this);
-       $('html, body').stop().animate({
-           scrollTop: $($anchor.attr('href')).offset().top
-       }, 1500, 'easeInOutExpo');
-       event.preventDefault();
-   });
-})
-
-</script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
