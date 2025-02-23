@@ -13,6 +13,7 @@ body {
 .container {
     display: flex;
     width: 100%;
+    margin: 0 10%;
 }
 
 .sidebar {
@@ -166,7 +167,7 @@ footer {
     flex-direction: column;
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     background: #1f1f1f;
     padding: 1rem;
     border-radius: 5px;
@@ -201,12 +202,16 @@ footer {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .sidebar {
-        width: 150px;
+    .container {
+        margin: 0 0;
     }
 
-    .content {
-        margin-left: 170px;
+    .summary-text-container {
+        flex-direction: column;
+    }
+
+    .summary-text-right {
+        max-width: 100%;
     }
 
     header, section, footer {
@@ -272,12 +277,15 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .container {
+        margin: 0 0;
+    }
     .sidebar {
-        width: 100px;
+        /* width: 100px; */
     }
 
     .content {
-        margin-left: 120px;
+        /* margin-left: 120px; */
     }
 
     header h1 {
@@ -371,6 +379,10 @@ footer {
     max-width: 80%;
 }
 
+.summary-text-container {
+    display: flex;
+
+}
 .summary-text-top {    
     align-self: flex-start;
     font-size: 2rem;
@@ -378,20 +390,22 @@ footer {
 }
 
 .summary-text-right {
-    flex: 1;
-    max-width: 45%;
+    flex: 1;    
     align-self: flex-start;
     margin-top: 20px;
 }
 
 .summary-image {
-    flex: 0 0 auto;
+    width: 40%;
     margin-left: 20px;
+    margin-right: 20px;
+    align-self: center;
+    max-width: 400px;
 }
 
 .profile-image {
     border-radius: 50%;
-    width: 50%; /* Increase the image size */    
+    width: 100%; /* Increase the image size */    
 }
 
 .centered-section {
@@ -426,14 +440,18 @@ footer {
     height: 100%;
 }
 
-#technologies {
-    background-color: #1e1e1e; /* Dark background to mimic a terminal */
+#technologies {    
     color: #d4d4d4; /* Light text color */
     padding: 1rem;
     border-radius: 5px;
     font-family: monospace; /* Monospace font for terminal look */
-    padding-top: 4rem; /* Add padding to the top */
+    padding-top: 3rem; /* Add padding to the top */
     scroll-margin-top: 4rem; /* Ensure section is not hidden behind the top nav */
+}
+
+.technologies-background {
+    background-color: #1e1e1e; /* Dark background to mimic a terminal */
+    padding-top: 1rem;
 }
 
 #technologies h2 {
