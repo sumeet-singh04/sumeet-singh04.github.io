@@ -23,14 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Trigger animation on scroll
     const jobs = document.querySelectorAll('.job');
-    window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY + window.innerHeight;
-        jobs.forEach(job => {
-            if (scrollPosition > job.offsetTop + job.offsetHeight / 2) {
-                job.classList.add('animate');
-            }
-        });
-    });
 
     // Animate progress bar on scroll
     const progressBar = document.querySelector('.progress-bar');

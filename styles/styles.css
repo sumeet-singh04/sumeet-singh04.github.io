@@ -103,6 +103,7 @@ footer {
 
 #contact {
     background: none;
+    font-size: 1.2rem; /* Increase font size */
 }
 
 .top-nav {
@@ -384,8 +385,7 @@ footer {
 
 }
 .summary-text-top {    
-    align-self: flex-start;
-    font-size: 2rem;
+    align-self: flex-start;    
     margin-top: 20px;
 }
 
@@ -447,6 +447,7 @@ footer {
     font-family: monospace; /* Monospace font for terminal look */
     padding-top: 3rem; /* Add padding to the top */
     scroll-margin-top: 4rem; /* Ensure section is not hidden behind the top nav */
+    font-size: 1.2rem; /* Increase font size */
 }
 
 .technologies-background {
@@ -511,4 +512,16 @@ footer {
     transform: translateY(-50%);
     color: #fff;
     font-size: 1rem;
+}
+
+#summary {
+    font-size: 1.2rem; /* Increase font size */
+}
+
+#experience {
+    font-size: 1.2rem; /* Increase font size */
+}
+
+#education {
+    font-size: 1.2rem; /* Increase font size */
 }
