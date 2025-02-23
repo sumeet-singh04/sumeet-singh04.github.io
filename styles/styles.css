@@ -465,7 +465,7 @@ footer {
 
 #technologies ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0 0 0 1.5rem;
 }
 
 #technologies ul li {
