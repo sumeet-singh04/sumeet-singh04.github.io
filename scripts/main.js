@@ -7,8 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
 
+            const headerOffset = document.querySelector('.top-nav').offsetHeight;
+            const elementPosition = targetElement.offsetTop;
+            const offsetPosition = elementPosition - headerOffset;
+
             window.scrollTo({
-                top: targetElement.offsetTop,
+                top: offsetPosition,
                 behavior: 'smooth'
             });
         });

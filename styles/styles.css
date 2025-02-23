@@ -76,6 +76,10 @@ section {
     scroll-margin-top: 4rem; /* Ensure section is not hidden behind the top nav */
 }
 
+#projects {
+    padding-top: 1rem;
+}
+
 h2 {
     border-bottom: 2px solid #333; /* Dark border */
     padding-bottom: 0.5rem;
@@ -484,6 +488,10 @@ footer {
     color: #569cd6; /* Blue color to differentiate */
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+}
+
+.project p {
+    text-align: left; /* Left align paragraph text under project */
 }
 
 .progress-container {
